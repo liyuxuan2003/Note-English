@@ -1,0 +1,113 @@
+\contentsline {section}{\numberline {1}词语}{5}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}词类}{5}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}派生构词法-前缀}{6}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.3}派生构词法-后缀}{10}{subsection.1.3}% 
+\contentsline {subsection}{\numberline {1.4}转化构词法}{18}{subsection.1.4}% 
+\contentsline {subsubsection}{\numberline {1.4.1}动词转化为名词}{18}{subsubsection.1.4.1}% 
+\contentsline {subsubsection}{\numberline {1.4.2}名词转化为动词}{19}{subsubsection.1.4.2}% 
+\contentsline {subsubsection}{\numberline {1.4.3}形容词转化为动词}{19}{subsubsection.1.4.3}% 
+\contentsline {subsubsection}{\numberline {1.4.4}形容词转化为副词}{20}{subsubsection.1.4.4}% 
+\contentsline {subsubsection}{\numberline {1.4.5}形容词转化为名词}{20}{subsubsection.1.4.5}% 
+\contentsline {subsubsection}{\numberline {1.4.6}词类转化中的拼写变化}{20}{subsubsection.1.4.6}% 
+\contentsline {subsection}{\numberline {1.5}合成构词法}{21}{subsection.1.5}% 
+\contentsline {section}{\numberline {2}句子}{23}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}句子成分}{23}{subsection.2.1}% 
+\contentsline {subsubsection}{\numberline {2.1.1}主语\nobreakspace {}\nobreakspace {}宾语}{26}{subsubsection.2.1.1}% 
+\contentsline {subsubsection}{\numberline {2.1.2}谓语}{26}{subsubsection.2.1.2}% 
+\contentsline {subsubsection}{\numberline {2.1.3}定语\nobreakspace {}\nobreakspace {}状语}{27}{subsubsection.2.1.3}% 
+\contentsline {subsubsection}{\numberline {2.1.4}补语}{28}{subsubsection.2.1.4}% 
+\contentsline {subsection}{\numberline {2.2}句子类型}{29}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}句型\texttt {SV}}{30}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}句型\texttt {SVA}}{30}{subsubsection.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.3}句型\texttt {SVC}}{30}{subsubsection.2.2.3}% 
+\contentsline {subsubsection}{\numberline {2.2.4}句型\texttt {SVO}}{31}{subsubsection.2.2.4}% 
+\contentsline {subsubsection}{\numberline {2.2.5}句型\texttt {SVOA}}{31}{subsubsection.2.2.5}% 
+\contentsline {subsubsection}{\numberline {2.2.6}句型\texttt {SVOO}}{31}{subsubsection.2.2.6}% 
+\contentsline {subsubsection}{\numberline {2.2.7}句型\texttt {SVOC}}{32}{subsubsection.2.2.7}% 
+\contentsline {subsubsection}{\numberline {2.2.8}关于含有状语的句型}{32}{subsubsection.2.2.8}% 
+\contentsline {subsection}{\numberline {2.3}句子语序}{33}{subsection.2.3}% 
+\contentsline {subsubsection}{\numberline {2.3.1}谓语动词为短语动词时宾语的位置}{33}{subsubsection.2.3.1}% 
+\contentsline {subsubsection}{\numberline {2.3.2}谓语动词为介词动词时宾语的位置}{33}{subsubsection.2.3.2}% 
+\contentsline {subsubsection}{\numberline {2.3.3}间接宾语必须前置的情况}{34}{subsubsection.2.3.3}% 
+\contentsline {subsubsection}{\numberline {2.3.4}间接宾语必须后置的情况}{34}{subsubsection.2.3.4}% 
+\contentsline {subsubsection}{\numberline {2.3.5}间接宾语位置不限的情况}{34}{subsubsection.2.3.5}% 
+\contentsline {subsubsection}{\numberline {2.3.6}形容词词组修饰名词时的定语后置}{35}{subsubsection.2.3.6}% 
+\contentsline {subsubsection}{\numberline {2.3.7}形容词修饰不定代词时的定语后置}{35}{subsubsection.2.3.7}% 
+\contentsline {subsubsection}{\numberline {2.3.8}多个定语同时修饰的排列顺序}{36}{subsubsection.2.3.8}% 
+\contentsline {subsubsection}{\numberline {2.3.9}多个状语同时修饰的排列顺序}{36}{subsubsection.2.3.9}% 
+\contentsline {subsubsection}{\numberline {2.3.10}时间状语的情况}{37}{subsubsection.2.3.10}% 
+\contentsline {subsubsection}{\numberline {2.3.11}频度状语的情况}{37}{subsubsection.2.3.11}% 
+\contentsline {subsubsection}{\numberline {2.3.12}表示否定意义的状语的情况}{38}{subsubsection.2.3.12}% 
+\contentsline {subsubsection}{\numberline {2.3.13}表示强调意义的状语的情况}{38}{subsubsection.2.3.13}% 
+\contentsline {subsubsection}{\numberline {2.3.14}评说性状语的情况}{38}{subsubsection.2.3.14}% 
+\contentsline {subsubsection}{\numberline {2.3.15}连接性状语的情况}{38}{subsubsection.2.3.15}% 
+\contentsline {subsubsection}{\numberline {2.3.16}副词\texttt {enough\nobreakspace {}}做状语的情况}{39}{subsubsection.2.3.16}% 
+\contentsline {section}{\numberline {3}名词}{40}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}名词的定量表示}{40}{subsection.3.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1}表示个数的单位词}{40}{subsubsection.3.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.2}表示形状的单位词}{40}{subsubsection.3.1.2}% 
+\contentsline {subsubsection}{\numberline {3.1.3}表示容积的单位词}{41}{subsubsection.3.1.3}% 
+\contentsline {subsubsection}{\numberline {3.1.4}表示状态的单位词}{41}{subsubsection.3.1.4}% 
+\contentsline {subsubsection}{\numberline {3.1.5}兼可用于可数名词的单位词}{41}{subsubsection.3.1.5}% 
+\contentsline {subsection}{\numberline {3.2}名词的不定量表示}{42}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}可以同时修饰两者的不定量表示}{42}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}可以修饰可数名词的不定量表示}{42}{subsubsection.3.2.2}% 
+\contentsline {subsubsection}{\numberline {3.2.3}可以修饰不可数名词的不定量表示}{42}{subsubsection.3.2.3}% 
+\contentsline {subsection}{\numberline {3.3}名词的复数}{43}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}名词属格}{46}{subsection.3.4}% 
+\contentsline {subsubsection}{\numberline {3.4.1}属格\texttt {'s}}{46}{subsubsection.3.4.1}% 
+\contentsline {subsubsection}{\numberline {3.4.2}属格\texttt {\hspace {3pt}of}}{46}{subsubsection.3.4.2}% 
+\contentsline {subsubsection}{\numberline {3.4.3}可以使用两种属格的情况}{47}{subsubsection.3.4.3}% 
+\contentsline {subsubsection}{\numberline {3.4.4}必须用\texttt {\hspace {2pt}of}属格的情况}{48}{subsubsection.3.4.4}% 
+\contentsline {subsubsection}{\numberline {3.4.5}必须用\texttt {\hspace {2pt}'s}属格的情况}{48}{subsubsection.3.4.5}% 
+\contentsline {section}{\numberline {4}代词}{49}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}人称代词}{49}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}物主代词}{52}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}自身代词}{53}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}指示代词}{54}{subsection.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.1}指示代词的近指和远指}{54}{subsubsection.4.4.1}% 
+\contentsline {subsubsection}{\numberline {4.4.2}指示代词的替代作用}{54}{subsubsection.4.4.2}% 
+\contentsline {subsubsection}{\numberline {4.4.3}指示代词{\hspace {3pt}\ttfamily such}的用法}{55}{subsubsection.4.4.3}% 
+\contentsline {subsection}{\numberline {4.5}疑问代词}{56}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}疑问代词{\hspace {3pt}\ttfamily who}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily what}}{56}{subsubsection.4.5.1}% 
+\contentsline {subsubsection}{\numberline {4.5.2}疑问代词{\hspace {3pt}\ttfamily which}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily who}}{56}{subsubsection.4.5.2}% 
+\contentsline {subsubsection}{\numberline {4.5.3}疑问代词{\hspace {3pt}\ttfamily which}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily what}}{56}{subsubsection.4.5.3}% 
+\contentsline {subsubsection}{\numberline {4.5.4}疑问代词和介词连用的情况}{57}{subsubsection.4.5.4}% 
+\contentsline {subsubsection}{\numberline {4.5.5}疑问代词{\hspace {3pt}\ttfamily who}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily whose}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily whom}}{57}{subsubsection.4.5.5}% 
+\contentsline {subsection}{\numberline {4.6}相互代词}{58}{subsection.4.6}% 
+\contentsline {subsection}{\numberline {4.7}不定代词}{59}{subsection.4.7}% 
+\contentsline {subsubsection}{\numberline {4.7.1}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily one}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily ones}}{59}{subsubsection.4.7.1}% 
+\contentsline {subsubsection}{\numberline {4.7.2}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily one}与{\hspace {3pt}\ttfamily it}的比较}{60}{subsubsection.4.7.2}% 
+\contentsline {subsubsection}{\numberline {4.7.3}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily one}与{\hspace {3pt}\ttfamily that}的比较}{60}{subsubsection.4.7.3}% 
+\contentsline {subsubsection}{\numberline {4.7.4}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily (some/any/no)+(body/thing)}}{60}{subsubsection.4.7.4}% 
+\contentsline {subsubsection}{\numberline {4.7.5}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily every one}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily everyone}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily everybody}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily each}}{62}{subsubsection.4.7.5}% 
+\contentsline {subsubsection}{\numberline {4.7.6}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily no one}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily nobody}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily none}}{63}{subsubsection.4.7.6}% 
+\contentsline {subsubsection}{\numberline {4.7.7}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily any one}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily anyone}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily anybody}}{64}{subsubsection.4.7.7}% 
+\contentsline {subsubsection}{\numberline {4.7.8}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily some one}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily soemone}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily somebody}}{65}{subsubsection.4.7.8}% 
+\contentsline {subsubsection}{\numberline {4.7.9}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily both}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily all}}{66}{subsubsection.4.7.9}% 
+\contentsline {subsubsection}{\numberline {4.7.10}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily either}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily neither}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily none}}{67}{subsubsection.4.7.10}% 
+\contentsline {subsubsection}{\numberline {4.7.11}不定代词\nobreakspace {}{\hspace {3pt}\ttfamily another}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily others}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily the others}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily the other}}{68}{subsubsection.4.7.11}% 
+\contentsline {section}{\numberline {5}限定词}{70}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}限定词修饰名词的用法比较}{70}{subsection.5.1}% 
+\contentsline {subsubsection}{\numberline {5.1.1}限定词\nobreakspace {}{\hspace {3pt}\ttfamily another}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily other}}{70}{subsubsection.5.1.1}% 
+\contentsline {subsubsection}{\numberline {5.1.2}限定词\nobreakspace {}{\hspace {3pt}\ttfamily either}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily neither}}{71}{subsubsection.5.1.2}% 
+\contentsline {subsubsection}{\numberline {5.1.3}限定词\nobreakspace {}{\hspace {3pt}\ttfamily either}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily every}}{71}{subsubsection.5.1.3}% 
+\contentsline {subsubsection}{\numberline {5.1.4}限定词\nobreakspace {}{\hspace {3pt}\ttfamily both}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily all}}{72}{subsubsection.5.1.4}% 
+\contentsline {subsubsection}{\numberline {5.1.5}限定词\nobreakspace {}{\hspace {3pt}\ttfamily some}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily any}}{72}{subsubsection.5.1.5}% 
+\contentsline {subsubsection}{\numberline {5.1.6}限定词\nobreakspace {}{\hspace {3pt}\ttfamily few}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily little}}{73}{subsubsection.5.1.6}% 
+\contentsline {subsubsection}{\numberline {5.1.7}限定词\nobreakspace {}{\hspace {3pt}\ttfamily serval}}{74}{subsubsection.5.1.7}% 
+\contentsline {subsubsection}{\numberline {5.1.8}限定词\nobreakspace {}{\hspace {3pt}\ttfamily many}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily much}}{74}{subsubsection.5.1.8}% 
+\contentsline {subsubsection}{\numberline {5.1.9}限定词\nobreakspace {}{\hspace {3pt}\ttfamily no}}{75}{subsubsection.5.1.9}% 
+\contentsline {subsection}{\numberline {5.2}限定词与表示时间的名词的搭配}{76}{subsection.5.2}% 
+\contentsline {subsubsection}{\numberline {5.2.1}限定词\nobreakspace {}{\hspace {3pt}\ttfamily this}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily these}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily that}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily those}}{76}{subsubsection.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.2}限定词\nobreakspace {}{\hspace {3pt}\ttfamily next}}{77}{subsubsection.5.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.3}限定词\nobreakspace {}{\hspace {3pt}\ttfamily last}}{78}{subsubsection.5.2.3}% 
+\contentsline {subsubsection}{\numberline {5.2.4}限定词\nobreakspace {}{\hspace {3pt}\ttfamily every}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily another}\nobreakspace {}\nobreakspace {}{\hspace {3pt}\ttfamily other}}{78}{subsubsection.5.2.4}% 
+\contentsline {subsubsection}{\numberline {5.2.5}限定词\nobreakspace {}{\hspace {3pt}\ttfamily one}}{79}{subsubsection.5.2.5}% 
+\contentsline {subsubsection}{\numberline {5.2.6}限定词\nobreakspace {}{\hspace {3pt}\ttfamily all}}{79}{subsubsection.5.2.6}% 
+\contentsline {subsubsection}{\numberline {5.2.7}表示频度}{79}{subsubsection.5.2.7}% 
+\contentsline {section}{\numberline {6}冠词}{80}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}冠词表示类指}{80}{subsection.6.1}% 
+\contentsline {subsubsection}{\numberline {6.1.1}定冠词{\hspace {3pt}\ttfamily the}与集体名词连用}{81}{subsubsection.6.1.1}% 
+\contentsline {subsubsection}{\numberline {6.1.2}定冠词{\hspace {3pt}\ttfamily the}与形容词连用}{81}{subsubsection.6.1.2}% 
+\contentsline {subsection}{\numberline {6.2}冠词表示量度}{83}{subsection.6.2}% 

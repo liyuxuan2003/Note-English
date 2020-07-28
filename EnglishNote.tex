@@ -1,0 +1,4257 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{ctexart}
+
+\RequirePackage{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\RequirePackage{tikz}
+\usetikzlibrary{calc} 
+
+\RequirePackage{enumitem}
+
+\RequirePackage[hidelinks]{hyperref}
+
+\setmainfont{Times New Roman}
+\setmonofont{Consolas}
+
+\setCJKmainfont{等线}
+\setCJKsansfont{等线}
+\setCJKmonofont{等线}
+
+\newcommand{\rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\newcommand{\littf}[1]{{\hspace{3pt}\ttfamily #1}}
+\newcommand{\lirmf}[1]{{\hspace{3pt}\rmfamily #1}}
+
+\newcommand{\LiDrawContainer}[6][solid]
+{
+    \coordinate (A1) at #2;
+    \coordinate (A2) at #3;
+    \coordinate (B1) at ($#2+(0,#4)$);
+    \coordinate (B2) at ($#3+(0,#4)$);
+
+    \draw (A1)--(B1);
+    \draw[#1] (A2)--(B2);
+    \draw (B1)--(B2);
+
+    \node at($0.5*(B1)+0.5*(B2)+(0,#5)$) {#6};
+}
+
+\RequirePackage{geometry}
+\geometry
+{
+    left=1.25in,
+    right=1.25in,
+    top=1in,
+    bottom=1in
+}
+
+\title{英语笔记}
+\author{李宇轩}
+\date{2020.06.27}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\setlength{\parindent}{0pt}
+
+\ctexset{space=false}
+
+\section{词语}
+
+\subsection{词类}
+    词语根据其特点可以分为十类：\vspace{8pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{80pt}|p{80pt}|p{100pt}}
+                \hline
+                词类&英语名称&英语缩写&示例\\ \hline
+                名词&noun&\textit{n.}&apple~~banana\\ \hline
+                代词&pronoun&\textit{pron.}&he~~she~~some\\ \hline
+                动词&verb&\textit{v.}&run~~swim\\ \hline
+                形容词&adjective&\textit{adj.}&bad~~~happy\\ \hline
+                副词&adverb&\textit{adv.}&badly~~happily\\ \hline
+                数词&numeral&\textit{num.}&one~~two~~third\\ \hline
+                冠词&article&\textit{art.}&a~~an~~the\\ \hline
+                介词&preposition&\textit{prep.}&in~~on~~with\\ \hline
+                连词&conjunction&\textit{conj.}&and~~or~~but\\ \hline
+                感叹词&interjection&\textit{int.}&oh~~ah\\ \hline
+            \end{tabular}
+            \caption{词的分类}
+        \end{center}
+    \end{table}\\
+    这种分类称为词类（{\ttfamily parts of speech}）。\\[3mm]
+    实词可以在句中独立充当成分，实词包含了：名词，代词，动词，形容词，副词，数词。\\[3mm]
+    虚词不能在句中独立充当成分，虚词包含了：冠词，介词，连词，感叹词。\\[8mm]
+    同一个词在不同的场合可以用作不同词类：\\[4mm]
+    词语{\ttfamily lead}可以用作不同词类：
+    \begin{center}
+        \ttfamily
+        They \textbf{lead} us through the dark forest.~~(\textit{v.})\\[3mm]
+        She gained the \textbf{lead} in the race.~~(\textit{n.})\\[6mm]
+    \end{center}
+    词语{\ttfamily behind}可以用作不同词类：
+    \begin{center}
+        \ttfamily
+        The sun sank \textbf{behind} the hills.~~(\textit{prep.})\\[3mm]
+        The dog ran \textbf{behind} me.~~(\textit{adv.})\\[6mm]
+    \end{center}
+    词语{\ttfamily light}可以用作不同词类：
+    \begin{center}
+        \ttfamily
+        The feather is very \textbf{light}.~~(\textit{adj.})\\[3mm]
+        Red \textbf{light} spread above the hills.~~(\textit{n.})
+    \end{center}
+
+\newpage
+
+\subsection{派生构词法-前缀}
+    派生（{\ttfamily derivation}）是由词根加词缀构成新词，构成的新词称为派生词。\\[3mm]
+    前缀（{\ttfamily prefix}）通常只改变词的意义，前缀通常不引起词类的转化。\\[3mm]
+    以下前缀用于在形容词和副词及名词之前表示相反意义：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{100pt}|p{100pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                ab-&不~非&abnormal&反常的\\ \hline
+                dis-&不~非&dishonest&不诚实的\\ \hline
+                dis-&不~非&discontent&不满意的\\ \hline
+                dis-&不~非&disorderly&杂乱的\\ \hline
+                dis-&不~非&discouraging&令人泄气的\\ \hline
+                il-&不~非&illegal&非法的\\ \hline
+                il-&不~非&illogical&不合逻辑的\\ \hline
+                im-&不~非&impossible&不可能的\\ \hline
+                im-&不~非&impolite&不礼貌的\\ \hline
+                im-&不~非&imperfect&不完美的\\ \hline
+                im-&不~非&immoral&不道德的\\ \hline
+                in-&不~非&incorrect&不正确的\\ \hline
+                in-&不~非&incomplete&不完整的\\ \hline
+                in-&不~非&inexpensive&不贵的\\ \hline
+                in-&不~非&inactive&不活跃的\\ \hline
+                ir-&不~非&irregular&不规则的\\ \hline
+                ir-&不~非&irresponsible&不负责任的\\ \hline
+                non-&不~非&nonstop&不停的\\ \hline
+                non-&不~非&nonsense&废话\\ \hline
+                non-&不~非&nonsmoker&不抽烟的人\\ \hline
+                non-&不~非&nonmetal&非金属\\ \hline
+                un-&不~非&unknown&无名的\\ \hline
+                un-&不~非&uncommon&不寻常的\\ \hline
+                un-&不~非&unfair&不公正的\\ \hline
+                un-&不~非&unexpected&意想不到的\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示相反意义的前缀}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+    以下用于名词前表示程度和大小：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                micro-&微小~微量&mistake&弄错\\ \hline
+                micro-&微小~微量&misspell&拼错\\ \hline
+                micro-&微小~微量&mislead&引导错\\ \hline
+                micro-&微小~微量&misunderstand&误解\\ \hline
+                mini-&小~小型&minibus&小型公交汽车\\ \hline
+                mini-&小~小型&minicab&微型出租汽车\\ \hline
+                mini-&小~小型&miniskirt&超短裙\\ \hline
+                mini-&小~小型&minicourse&简易课程\\ \hline
+                super-&超~超级&supermarket&超级市场\\ \hline
+                super-&超~超级&superpower&超级大国\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示程度和大小的前缀}
+        \end{center}
+    \end{table}\\
+    以下用于名词前表示时间和顺序：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                post-&在...后&postwar&战后的\\ \hline
+                post-&在...后&postpone&延期\\ \hline
+                post-&在...后&postgraduate&研究生\\ \hline
+                post-&在...后&postmoderb&后现代主义的\\ \hline
+                pre-&在...前&prewar&战前的\\ \hline
+                pre-&在...前&predict&预言\\ \hline
+                pre-&在...前&precede&先于\\ \hline
+                pre-&在...前&prehistory&史前\\ \hline
+                re-&重新~再&remarry&再婚\\ \hline
+                re-&重新~再&retell&复述\\ \hline
+                re-&重新~再&rebuild&重建\\ \hline
+                re-&重新~再&reunite&重新统一\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示时间和顺序的前缀}
+        \end{center}
+    \end{table}
+
+
+\newpage
+
+    以下用于动词前表示相反的动作：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                de-&分离~降低&decompose&分解\\ \hline
+                de-&分离~降低&deforest&滥伐森林\\ \hline
+                de-&分离~降低&derail&使出轨\\ \hline
+                de-&分离~降低&devalue&使贬值\\ \hline
+                dis-&剥夺~除去&disclose&揭露\\ \hline
+                dis-&剥夺~除去&disconnect&使分离\\ \hline
+                dis-&剥夺~除去&discourage&使泄气\\ \hline
+                dis-&剥夺~除去&disarm&解除武器\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示相反意义的前缀}
+        \end{center}
+    \end{table}\\
+    以下用于动词前表示错误的动作：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                mis-&错&mistake&弄错\\ \hline
+                mis-&错&misspell&拼错\\ \hline
+                mis-&错&mislead&引导错\\ \hline
+                mis-&误&misunderstand&误解\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示错误意义的前缀}
+        \end{center}
+    \end{table}\\
+    以下可以将词性变为形容词：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                a-&构成形容词&asleep&睡着的\\ \hline
+                a-&构成形容词&awake&醒着的\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{将词性变为形容词的前缀}
+        \end{center}
+    \end{table}\\
+    以下可以将词性变为副词：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                a-&构成副词&abroad&在国外\\ \hline
+                a-&构成副词&aside&在一旁\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{将词性变为副词的前缀}
+        \end{center}
+    \end{table}
+
+\newpage
+
+    以下可以将词性变为动词：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                en-&构成动词&endanger&使处于危险\\ \hline
+                en-&构成动词&enrich&使富裕\\ \hline
+                en-&构成动词&enable&使能够\\ \hline
+                en-&构成动词&enslave&使成为努力\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{将词性变为动词的前缀}
+        \end{center}
+    \end{table}\\
+    以下用于表示其他含义：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{90pt}|p{90pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                auto-&自动的&automatic&自动化的\\ \hline
+                auto-&自动的&automobile&汽车\\ \hline
+                eco-&生态的&eco-conscious&具有环保意识的\\ \hline
+                eco-&生态的&eco-friendly&对生态环境无害的\\ \hline
+                inter-&相互的&international&国际的\\ \hline
+                inter-&相互的&interphone&对讲机\\ \hline
+                inter-&相互的&interchangeable&可交换的\\ \hline
+                inter-&相互的&interaction&相互作用\\ \hline
+                kilo-&千&kilometer&千米\\ \hline
+                kilo-&千&kilogramme&千克\\ \hline
+                mal-&不良~不当&malnutrition&营养不良\\ \hline
+                mal-&不良~不当&maltreat&虐待\\ \hline
+                multi-&多&multimedia&多媒体\\ \hline
+                multi-&多&multicolored&多色的\\ \hline
+                self-&自我&self-control&自控的\\ \hline
+                self-&自我&self-service&自助的\\ \hline
+                self-&自我&self-taught&自学而成的\\ \hline
+                self-&自我&self-defence&自卫\\ \hline
+                semi-&半&semicircle&半圆\\ \hline
+                semi-&半&semifinal&半决赛\\ \hline
+                tele-&远距离&telephone&电话\\ \hline
+                tele-&远距离&television&电视\\ \hline
+                tele-&远距离&telegraph&电报\\ \hline
+                tele-&远距离&telescope&望远镜\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示其他含义的前缀}
+        \end{center}
+    \end{table}
+
+\newpage
+
+\subsection{派生构词法-后缀}
+    派生（{\ttfamily derivation}）是由词根加词缀构成新词，构成的新词称为派生词。\\[3mm]
+    后缀（{\ttfamily suffix}）通常只改变词的词类，后缀通常不引起词意的改变。\\[3mm]
+    构成名词表示人：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                -an&...地方的人&African&非洲人\\ \hline
+                -an&...地方的人&American&美国人\\ \hline
+                -an&...地方的人&Russian&俄国人\\ \hline
+                -ant&...者&assistant&助手\\ \hline
+                -ant&...者&accountant&会计\\ \hline
+                -ant&...者&occupant&占有者\\ \hline
+                -er&...者&foreigner&外国人\\ \hline
+                -er&...者&swimmer&游泳者\\ \hline
+                -er&...者&traveller&旅游者\\ \hline
+                -er&从事职业的人&worker&工人\\ \hline
+                -er&从事职业的人&writer&作家\\ \hline
+                -er&研究学问的人&researcher&研究者\\ \hline
+                -er&研究学问的人&geographer&地理学者\\ \hline
+                -er&研究学问的人&astronomer&天文学者\\ \hline
+                -er&...地方的人&villager&村民\\ \hline
+                -er&...地方的人&southerner&南方人\\ \hline
+                -er&...地方的人&northerner&北方人\\ \hline
+                -ese&...地方的人&Chinese&中国人\\ \hline
+                -ese&...地方的人&Japnese&日本人\\ \hline
+                -ian&专业人员&technician&技术员\\ \hline
+                -ian&专业人员&magician&魔术师\\ \hline
+                -ian&专业人员&musician&音乐家\\ \hline
+                -ist&专业人员&pianist&钢琴家\\ \hline
+                -ist&专业人员&geologist&地质学家\\ \hline
+                -ist&专业人员&physicist&物理学家\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示人的后缀}
+        \end{center}
+    \end{table}
+
+\newpage
+
+    构成名词表示施动者：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{120pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                -er&施动者&employer&雇主\\ \hline
+                -er&施动者&examiner&主考人~检查人\\ \hline
+                -er&施动者&interviewer&进行面试者~进行采访者\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示施动者的后缀}
+        \end{center}
+    \end{table}\\
+    构成名词表示受动者：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{120pt}}
+                \hline
+                前缀&前缀含义&单词英语&单词中文\\ \hline
+                -ee&受动者&employee&雇员\\ \hline
+                -ee&受动者&examinee&受试人~受检者\\ \hline
+                -ee&受动者&interviewee&被面试者~被采访者\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示受动者的后缀}
+        \end{center}
+    \end{table}\\
+    构成名词表示器具：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -er&器具&cooker&炊具\\ \hline
+                -er&器具&washer&洗衣机\\ \hline
+                -er&器具&speaker&扬声器\\ \hline
+                -or&器具&tractor&拖拉机\\ \hline
+                -or&器具&translator&翻译机\\ \hline
+                -or&器具&calculator&计算器\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示器具的后缀}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+    构成名词表示性质或状态（由形容词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -ance&性质~状态&importance&重要性\\ \hline
+                -ance&性质~状态&arrogance&傲慢\\ \hline
+                -ance&性质~状态&ignorance&无知\\ \hline
+                -dom&性质~状态&freedom&自由\\ \hline
+                -dom&性质~状态&wisdom&智慧\\ \hline
+                -ence&性质~状态&difference&区别\\ \hline
+                -ence&性质~状态&independence&独立\\ \hline
+                -ence&性质~状态&convenience&方便\\ \hline
+                -ness&性质~状态&kindness&善意\\ \hline
+                -ness&性质~状态&happiness&快乐\\ \hline
+                -ness&性质~状态&sadness&悲伤\\ \hline
+                -ship&性质~状态&hardship&艰苦\\ \hline
+                -ship&性质~状态&friendship&友谊\\ \hline
+                -th&性质~状态&wealth&富裕\\ \hline
+                -th&性质~状态&truth&真理\\ \hline
+                -th&性质~状态&warmth&温暖\\ \hline
+                -ity&性质~状态&activity&活动\\ \hline
+                -ity&性质~状态&reality&现实\\ \hline
+                -ity&性质~状态&possibility&可能性\\ \hline
+                -ty&性质~状态&safety&安全\\ \hline
+                -ty&性质~状态&cruelty&残酷\\ \hline
+                -ty&性质~状态&anxiety&焦虑\\ \hline
+                -y&性质~状态&difficulty&困难\\ \hline
+                -y&性质~状态&honesty&诚实\\ \hline
+                -y&性质~状态&jealousy&嫉妒\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示性质或状态的后缀}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+    构成名词表示动作或结果（由动词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -age&动作~结果&passage&通过\\ \hline
+                -age&动作~结果&marriage&结婚\\ \hline
+                -age&动作~结果&carriage&运输\\ \hline
+                -al&动作~结果&refusal&拒绝\\ \hline
+                -al&动作~结果&arrival&到达\\ \hline
+                -al&动作~结果&approval&批准\\ \hline
+                -ing&动作~结果&swimming&游泳\\ \hline
+                -ing&动作~结果&building&楼房\\ \hline
+                -ing&动作~结果&teaching&教导\\ \hline
+                -ment&动作~结果&development&发展\\ \hline
+                -ment&动作~结果&agreement&同意\\ \hline
+                -ment&动作~结果&government&政府\\ \hline
+                -ation&动作~结果&invitation&邀请\\ \hline
+                -ation&动作~结果&expectation&期望\\ \hline
+                -ation&动作~结果&observation&观察\\ \hline
+                -sion&动作~结果&discussion&讨论\\ \hline
+                -sion&动作~结果&decision&决定\\ \hline
+                -sion&动作~结果&impression&印象\\ \hline
+                -tion&动作~结果&pollution&污染\\ \hline
+                -tion&动作~结果&suggestion&建议\\ \hline
+                -tion&动作~结果&evolution&进化\\ \hline
+                -ure&动作~结果&seizure&夺取\\ \hline
+                -ure&动作~结果&exposure&暴露\\ \hline
+                -ure&动作~结果&failure&失败\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示动作或结果}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+    构成名词表示身份或职位（由名词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -hood&身份&childhood&童年\\ \hline
+                -hood&身份&boyhood&少年\\ \hline
+                -hood&身份&girlhood&少女\\ \hline
+                -hood&身份&adulthood&成年\\ \hline
+                -ship&职位&professorship&教授职位\\ \hline
+                -ship&职位&citizenship&公民资格\\ \hline
+                -ship&职位&kingship&王位\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示身份或职位}
+        \end{center}
+    \end{table}\\
+    构成名词表示主义者：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -ist&...主义者&socialist&社会主义者\\ \hline
+                -ist&...主义者&communist&共产主义者\\ \hline
+                -ist&...主义者&naturalist&自然主义者\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示主义者的后缀}
+        \end{center}
+    \end{table}\\
+    构成名词表示主义：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -ist&...主义者&socialism&社会主义\\ \hline
+                -ist&...主义者&communism&共产主义\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成名词表示主义的后缀}
+        \end{center}
+    \end{table}
+
+\newpage
+
+    构成形容词表示“有……性质”和“与……有关”（由名词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{120pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -an&有……性质~与……有关&European&欧洲的\\ \hline
+                -an&有……性质~与……有关&Indian&印度的\\ \hline
+                -an&有……性质~与……有关&Canadian&加拿大的\\ \hline
+                -al&有……性质~与……有关&national&全国的\\ \hline
+                -al&有……性质~与……有关&practical&实用的\\ \hline
+                -al&有……性质~与……有关&educational&教育的\\ \hline
+                -ant&有……性质~与……有关&important&重要的\\ \hline
+                -ant&有……性质~与……有关&miliant&好战的\\ \hline
+                -ary&有……性质~与……有关&secondary&第二位的\\ \hline
+                -ary&有……性质~与……有关&revolutionary&革命的\\ \hline
+                -en&有……性质~与……有关&wooden&木制的\\ \hline
+                -en&有……性质~与……有关&woolen&羊毛的\\ \hline
+                -en&有……性质~与……有关&golden&金色的\\ \hline
+                -ent&有……性质~与……有关&excellent&优秀\\ \hline
+                -ent&有……性质~与……有关&different&不同的\\ \hline
+                -ent&有……性质~与……有关&obedient&服从的\\ \hline
+                -ful&有……性质~与……有关&useful&有用的\\ \hline
+                -ful&有……性质~与……有关&helpful&有帮助的\\ \hline
+                -ful&有……性质~与……有关&cheerful&高兴的\\ \hline
+                -ive&有……性质~与……有关&native&本族的\\ \hline
+                -ive&有……性质~与……有关&active&活跃的\\ \hline
+                -ive&有……性质~与……有关&imaginative&有想象力的\\ \hline
+                -ly&有……性质~与……有关&friendly&友好的\\ \hline
+                -ly&有……性质~与……有关&lonely&孤独的\\ \hline
+                -ly&有……性质~与……有关&orderly&整齐的\\ \hline
+                -ous&有……性质~与……有关&poisonous&有毒的\\ \hline
+                -ous&有……性质~与……有关&famous&著名的\\ \hline
+                -ous&有……性质~与……有关&dangerous&危险的\\ \hline
+                -some&有……性质~与……有关&troublesome&令人烦恼的\\ \hline
+                -some&有……性质~与……有关&tiresome&令人厌倦的\\ \hline
+                -some&有……性质~与……有关&quarrelsome&好争吵的\\ \hline
+                -y&有……性质~与……有关&rainy&下雨的\\ \hline
+                -y&有……性质~与……有关&healthy&健康的\\ \hline
+                -y&有……性质~与……有关&sleepy&困倦的\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成形容词表示“有……性质”和“与……有关”}
+        \end{center}
+    \end{table}
+
+\newpage
+
+    构成形容词表示“可……的”和“能……的”（由动词）：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{120pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -able&“可……的”~“能……的”&suitable&合适的\\ \hline
+                -able&“可……的”~“能……的”&reliable&可靠的\\ \hline
+                -able&“可……的”~“能……的”&believable&可信的\\ \hline
+                -ible&“可……的”~“能……的”&responsible&负责的\\ \hline
+                -ible&“可……的”~“能……的”&possible&可能的\\ \hline
+                -ible&“可……的”~“能……的”&visible&可见的\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成形容词表示“可……的”和“能……的”的后缀}
+        \end{center}
+    \end{table}\\
+    构成形容词表示否定意义（由名词）：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -less&否定意义&careless&不仔细的\\ \hline
+                -less&否定意义&useless&无用的\\ \hline
+                -less&否定意义&fearless&无畏的\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成形容词表示否定意义的后缀}
+        \end{center}
+    \end{table}\\
+    构成副词表示方式（由形容词）：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -ly&表示方式&freely&自由地\\ \hline
+                -ly&表示方式&terribly&可怕地\\ \hline
+                -ly&表示方式&clearly&清楚地\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成副词表示方式的后缀}
+        \end{center}
+    \end{table}\\
+    构成副词表示方向（由形容词）：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -ward&表示方向&forward&向前\\ \hline
+                -ward&表示方向&backward&向后\\ \hline
+                -ward&表示方向&eastward&向东\\ \hline
+                -ward&表示方向&westward&向西\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成副词表示方式的后缀}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+    构成动词表示“使……化”和“使……成为”（由形容词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{120pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -en&使……化~使……成为&sharpen&磨快\\ \hline
+                -en&使……化~使……成为&harden&使……硬\\ \hline
+                -en&使……化~使……成为&soften&使……软\\ \hline
+                -ify&使……化~使……成为&beautify&美化\\ \hline
+                -ify&使……化~使……成为&simplify&简化\\ \hline
+                -ify&使……化~使……成为&electrify&使……带电\\ \hline
+                -ize&使……化~使……成为&realize&实现\\ \hline
+                -ize&使……化~使……成为&modernize&使……现代化\\ \hline
+                -ize&使……化~使……成为&industrialize&使……工业化\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成动词表示“使……化”和“使……成为”}
+        \end{center}
+    \end{table}\\
+    构成数词表示十几：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -teen&十几&thirteen&十三\\ \hline
+                -teen&十几&nineteen&十九\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成数词表示十几}
+        \end{center}
+    \end{table}\\
+    构成数词表示几十：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -ty&几十&twenty&二十\\ \hline
+                -ty&几十&forty&四十\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成数词表示几十}
+        \end{center}
+    \end{table}\\
+    构成数词表示序数词：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{80pt}|p{80pt}}
+                \hline
+                后缀&后缀含义&单词英语&单词中文\\ \hline
+                -th&序数词&fifth&第五\\ \hline
+                -th&序数词&eighth&第八\\ \hline
+                -th&序数词&fourteenth&第十四\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成数词表示序数词}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+\subsection{转化构词法}
+    转化（\texttt{conversion}）是由一个词类转化为另一个词类。
+
+\subsubsection{动词转化为名词}
+    某些表示情感心理的动词可以转化为名词：
+    \begin{center}
+        \large\ttfamily
+        He \textbf{desires} knowledge strongly.~~(v.)\\[3mm]
+        He has a strong \textbf{desire} for knowledge.~~(n.)\\[6mm]
+    \end{center}
+    某些表示情感心理的动词可以转化为名词：
+    \begin{center}
+        \large\ttfamily
+        We \textbf{love} our country deeply.~~(v.)\\[3mm]
+        We have a deep \textbf{love} for our country.~~(n.)\\[6mm]
+    \end{center}
+    某些动词组成动词词组后可以转化为名词：
+    \begin{center}
+        \large\ttfamily
+        He will \textbf{try}.~~(v.)\\[3mm]
+        He will have a \textbf{try}.~~(n.)\\[6mm]
+    \end{center}
+    某些动词组成动词词组后可以转化为名词：
+    \begin{center}
+        \large\ttfamily
+        They \textbf{searched} the woods.~~(v.)\\[3mm]
+        They made a \textbf{search} of the wood.~~(n.)\\[6mm]
+    \end{center}
+    这一类动词词组常通过以下动词构成：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{60pt}}
+                \hline
+                动词&例子英文&例子中文\\ \hline
+                make&make a bet&打赌\\ \hline
+                make&make a guess&猜测\\ \hline
+                have&have a swim&游泳\\ \hline
+                have&have a rest&休息\\ \hline
+                take&take a bath&洗澡\\ \hline
+                take&take a seat&就座\\ \hline
+                give&give a push&推\\ \hline
+                give&give a kick&踢\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{构成动词词组的动词}
+        \end{center}
+    \end{table}\\
+    当由动词变为动词词组后，该动词转化为名词。
+
+\newpage
+
+\subsubsection{名词转化为动词}
+    某些名词可以转化为动词：
+    \begin{center}
+        \large\ttfamily
+        I will send this \textbf{mail}.~~(n.)\\[3mm]
+        I will \textbf{mail} this package.~~(v.)\\[6mm]
+    \end{center}
+    某些名词可以转化为动词：
+    \begin{center}
+        \large\ttfamily
+        Fish are usually stored in cans.~~(n.)\\[3mm]
+        Fish are usually forzen and canned.~~(v.)\\[6mm]
+    \end{center}
+    某些表示身体部位的名词也可以转化为动词：
+    \begin{center}
+        \large\ttfamily
+        He shake \textbf{hands} with me.~~(n.)\\[3mm]
+        He \textbf{handed} his homework to me.~~(v.)\\[1mm]
+    \end{center}\vspace{5pt}
+
+\subsubsection{形容词转化为动词}
+    某些形容词可以转化为动词：
+    \begin{center}
+        \large\ttfamily
+        She is \textbf{calm}.~~(adj.)\\[3mm]
+        She need to \textbf{calm} down.~~(v.)\\[6mm]
+    \end{center}
+    某些形容词可以转化为动词：
+    \begin{center}
+        \large\ttfamily
+        His clothes are \textbf{dry}.~~(adj.)\\[3mm]
+        He \textbf{dried} his clothes.~~(v.)\\[6mm]
+    \end{center}
+    当形容词转化为动词时，常解释为“使……变得”或“使……成为”。
+
+\newpage
+
+\subsubsection{形容词转化为副词}
+    某些形容词可以转化为副词：
+    \begin{center}
+        \large\ttfamily
+        I have a seat in the \textbf{back} now.\\[3mm]
+        I have to go \textbf{back}.\\
+    \end{center}\vspace{15pt}
+
+\subsubsection{形容词转化为名词}
+    某些形容词可以转化为名词：
+    \begin{center}
+        \large\ttfamily
+        His clock shows the \textbf{wrong} time.\\[3mm]
+        He should know the difference between right and \textbf{wrong}.\\
+    \end{center}\vspace{15pt}
+
+\subsubsection{词类转化中的拼写变化}
+    当发生词类转化时，有时拼写会发生变化：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{80pt}|p{80pt}}
+                \hline
+                名词(n.)&动词(v.)\\ \hline
+                advice&advise\\ \hline
+                bath&bathe\\ \hline
+                belief&believe\\ \hline
+                blood&bleed\\ \hline
+                breath&breathe\\ \hline
+                emphasis&emphasize\\ \hline
+                food&feed\\ \hline
+                practice&practise\\ \hline
+                speech&speak\\ \hline
+                tale&tell\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{词类转化中的拼写变化}
+        \end{center}
+    \end{table}\\
+    这一类转化通常发生在名词转化为动词时。
+
+\newpage
+
+\subsection{合成构词法}
+    合成（{\ttfamily compunding}）就是由两个及以上的词构成一个词。\\[3mm]
+    合成词可以由两个单词直接构成：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{60pt}|p{80pt}|p{60pt}}
+                \hline
+                home&work&homework&作业\\ \hline
+                sun&sunrise&sunrise&日出\\ \hline
+                sun&set&sunset&日落\\ \hline
+                head&ache&headache&头疼\\ \hline
+                hand&bag&handbag&手提包\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{直接构成的合成词}
+        \end{center}
+    \end{table}\\
+    合成词可以由两个单词通过连字符号合成：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{60pt}|p{80pt}|p{60pt}}
+                \hline
+                duty&free&duty-free&免税的\\ \hline
+                sugar&sugar&sugar-free&无糖的\\ \hline
+                e&mail&e-mail&电子邮件\\ \hline
+                e&commerce&e-commerce&电子商务\\ \hline
+                group&buying&group-buying&团购\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{由连字符号构成的合成词}
+        \end{center}
+    \end{table}\\
+    合成词可以由两个单词通过空格符号合成：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{60pt}|p{80pt}|p{60pt}}
+                \hline
+                touch&screen&touch screen&触摸屏\\ \hline
+                cram&school&cram school&补习学校\\ \hline
+                flea&market&flea market&跳蚤市场\\ \hline
+                low&season&low season&旅游淡季\\ \hline
+                high&season&high season&旅游旺季\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{由空格符号构成的合成词}
+        \end{center}
+    \end{table}\\
+    合成词的意思有时不能简单的通过组分意义的叠加得到：\\[3mm]
+    例如{\ttfamily greenhouse~}一词，其含义是“温室”，而不是“绿色的屋子”。\\[3mm]
+    例如{\ttfamily greenhand\hphantom{s}~}一词，其含义是“新手”，而不是“绿色的手”。\\[3mm]
+
+\newpage
+
+    以下结构需要用连字符号（基数词+单数可数名词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{160pt}|p{80pt}}
+                \hline
+                a five-star hotel&五星级的宾馆\\ \hline
+                a three-member crew&三人机组\\ \hline
+                a two-act play&二幕剧\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{基数词+单数可数名词}
+        \end{center}
+    \end{table}\\
+    以下结构无需用连字符号（基数词+双数可数名词所有格）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{160pt}|p{80pt}}
+                \hline
+                ten miles' journey&十英里的旅程\\ \hline
+                ten mintues' break&十分钟的休息\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{基数词+双数可数名词所有格}
+        \end{center}
+    \end{table}\\
+    以下结构需要用连字符号（基数词+过去分词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{160pt}|p{80pt}}
+                \hline
+                a twenty-storeyed building&二十层的楼\\ \hline
+                a four-roomed apartment&四室套房\\ \hline
+                a three-legged stool&三脚凳\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{基数词+过去分词}
+        \end{center}
+    \end{table}\\
+    以下结构需要用连字符号（序数词+名词）：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{160pt}|p{80pt}}
+                \hline
+                first-rate&第一流的\\ \hline
+                second-class&第二流的\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{序数词+名词}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+\section{句子}
+
+\subsection{句子成分}
+    句子成分指的是在句子中承担一定功能的一个部分。\\[3mm]
+    句子成分根据其功能可以分为七类：主语，谓语，宾语，定语，状语，补语，同位语。\\[3mm]
+    句子成分可以简单的记忆为：主谓宾，定状补。\\[3mm]
+    句子成分的功能如下表：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{80pt}|p{190pt}}        
+                \hline
+                句子成分&英语名称&功能\\ \hline
+                主语&subject&说明句子主体。\\ \hline
+                谓语&predicate&说明句子主体的动作内容。\\ \hline
+                宾语&object&说明句子主体的动作对象。\\ \hline
+                定语&attributive&修饰名词，也可用于代词。\\ \hline
+                状语&adverial&修饰动词，也可用于形容词和副词。\\ \hline
+                补语&complement&补充说明主语和宾语。\\ \hline
+                同位语&appositive&??\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{句子成分的功能}
+        \end{center}
+    \end{table}\\
+    句子成分可以由以下内容充当：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{200pt}|p{70pt}}
+                \hline
+                句子成分&词组&从句\\ \hline
+                主语&名词、代词、动词&主语从句\\ \hline
+                谓语&动词&-\\ \hline
+                宾语&名词、代词、动词&宾语从句\\ \hline
+                定语&介词词组、动词、副词、形容词&定语从句\\ \hline
+                状语&介词词组、动词、副词&状语从句\\ \hline
+                补语&介词词组、动词、名词、形容词、副词&表语从句\\ \hline
+                同位语&名词、代词&同位语从句\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{句子成分的内容}
+        \end{center}
+    \end{table}\\
+    对于动词，若其充当谓语，称之为谓语动词。\\[3mm]
+    对于动词，若其不作谓语，称之为非谓语动词。\\[3mm]
+    在各个从句中，主语从句，宾语从句，表语从句，同位语从句，四者可以统称为名词性从句。
+
+\newpage
+
+    主语是说明句子主体的句子成分。\\[3mm]
+    谓语是说明句子主体动作内容的句子成分。\\[3mm]
+    宾语是说明句子主体动作对象的句子成分。\\[5mm]
+    考虑下面这个例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($10*(u)$);
+
+            \node at(offset) {\ttfamily\large She picked an apple.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+3*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+4*(u)+(-0.05,0)$)}{($(b)+10*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+11*(u)+(-0.04,0)$)}{($(b)+19*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+
+            \LiDrawContainer[<-]{($(a)+1.5*(u)+(0,0)$)}{($(a)+5*(u)+(+0.05,0)$)}{+0.2}{+0.3}{\footnotesize 动作内容}
+            \LiDrawContainer[<-]{($(a)+7.0*(u)+(0,0)$)}{($(a)+15*(u)+(+0.05,0)$)}{+0.2}{+0.3}{\footnotesize 动作对象}
+        \end{tikzpicture}
+    \end{center}
+    考虑下面这个例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($8.5*(u)$);
+
+            \node at(offset) {\ttfamily\large She is beautiful.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+3*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+4*(u)+(-0.05,0)$)}{($(b)+6*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+7*(u)+(-0.04,0)$)}{($(b)+16*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+
+            \LiDrawContainer[<-]{($(a)+1.5*(u)+(0,0)$)}{($(a)+5*(u)+(+0.05,0)$)}{+0.2}{+0.3}{\footnotesize 动作内容}
+        \end{tikzpicture}
+    \end{center}
+    考虑下面这个例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($6*(u)$);
+
+            \node at(offset) {\ttfamily\large She laughed.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+3*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+4*(u)+(-0.05,0)$)}{($(b)+11*(u)+(+0.06,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+
+            \LiDrawContainer[<-]{($(a)+1.5*(u)+(0,0)$)}{($(a)+7.5*(u)+(+0.05,0)$)}{+0.2}{+0.3}{\footnotesize 动作内容}
+        \end{tikzpicture}
+    \end{center}
+    由此可见，主语和谓语是必要的句子成分，宾语不是必要的句子成分。
+
+\newpage
+
+    定语是修饰句子中名词的句子成分，也可用于代词的修饰。\\[3mm]
+    状语是修饰句子中动词的句子成分，也可用于形容词或副词的修饰。\\[3mm]
+    补语是补充说明主语和宾语的句子成分。\\[5mm]
+    考虑下面这个例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13.5*(u)$);
+
+            \node at(offset) {\ttfamily\large These are very sour lemons.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+5*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+6*(u)+(-0.05,0)$)}{($(b)+9*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+10*(u)+(-0.04,0)$)}{($(b)+14*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+            \LiDrawContainer{($(b)+15*(u)+(-0.04,0)$)}{($(b)+19*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 定语}
+            \LiDrawContainer{($(b)+20*(u)+(-0.02,0)$)}{($(b)+26*(u)+(+0.06,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+
+            \LiDrawContainer[<-]{($(a)+12*(u)+(0,0)$)}{($(a)+16*(u)+(+0.05,0)$)}{+0.2}{+0.3}{\footnotesize 修饰形容词}
+            \LiDrawContainer[<-]{($(a)+18*(u)+(0,0)$)}{($(a)+23*(u)+(+0.05,0)$)}{+0.2}{+0.3}{\footnotesize 修饰名词}
+            \LiDrawContainer[<-]{($(a)+25*(u)+(0,0)$)}{($(a)+2*(u)+(+0.05,0)$)}{+0.9}{+0.3}{\footnotesize 补足主语}
+        \end{tikzpicture}
+    \end{center}
+    考虑下面这个例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13.5*(u)$);
+
+            \node at(offset) {\ttfamily\large These lemons are very sour.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+12*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+13*(u)+(-0.04,0)$)}{($(b)+16*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+17*(u)+(-0.04,0)$)}{($(b)+21*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+            \LiDrawContainer{($(b)+22*(u)+(-0.02,0)$)}{($(b)+26*(u)+(+0.06,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+
+            \LiDrawContainer[<-]{($(a)+19*(u)+(0,0)$)}{($(a)+23*(u)+(+0.05,0)$)}{+0.2}{+0.3}{\footnotesize 修饰形容词}
+            \LiDrawContainer[<-]{($(a)+25*(u)+(0,0)$)}{($(a)+8*(u)+(+0.05,0)$)}{+0.9}{+0.3}{\footnotesize 补足主语}
+        \end{tikzpicture}
+    \end{center}
+    由此可见，定语和状语是修饰性的，补语是说明性的。\\[3mm]
+    第一句的含义是“这是非常酸的柠檬”，因此\texttt{sour~}对\texttt{lemon~}是修饰作用，故\texttt{sour~}作定语。\\[3mm]
+    第二句的含义是“这柠檬是非常酸的”，因此\texttt{sour~}对\texttt{lemon~}是说明作用，故\texttt{sour~}作补语。
+
+\newpage
+
+\subsubsection{主语~~宾语}
+    主语可以由名词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13*(u)$);
+
+            \node at(offset) {\ttfamily\large \textbf{Tom} said goodbye to Jerry.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.05,0)$)}{($(b)+3*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+        \end{tikzpicture}
+    \end{center}
+    宾语可以由名词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13*(u)$);
+
+            \node at(offset) {\ttfamily\large Tom said goodbye to \textbf{Jerry}.};
+
+            \LiDrawContainer{($(b)+20*(u)+(+0.01,0)$)}{($(b)+25*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+        \end{tikzpicture}
+    \end{center}
+    主语可以由代词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($8.5*(u)$);
+
+            \node at(offset) {\ttfamily\large \textbf{She} talks to him.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.05,0)$)}{($(b)+3*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+        \end{tikzpicture}
+    \end{center}
+    宾语可以由名词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($8.5*(u)$);
+
+            \node at(offset) {\ttfamily\large She talks to \textbf{him}.};
+
+            \LiDrawContainer{($(b)+13*(u)+(+0.01,0)$)}{($(b)+16*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+        \end{tikzpicture}
+    \end{center}
+    主语通常由名词或代词充当，也可以由动词或主语从句充当。\\[3mm]
+    宾语通常由名词或代词充当，也可以由动词或宾语从句充当。\vspace{5pt}
+
+\subsubsection{谓语}
+    谓语可以由动词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($9*(u)$);
+
+            \node at(offset) {\ttfamily\large He \textbf{is} hardworking.};
+
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+5*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+        \end{tikzpicture}~~~~~~
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($9*(u)$);
+
+            \node at(offset) {\ttfamily\large He \textbf{was} a hero.\hphantom{0000}};
+
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+6*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+        \end{tikzpicture}~~~~~~
+    \end{center}
+    谓语可以由动词充当：
+    \begin{center}
+        ~~~~~~~~
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($12*(u)$);
+
+            \node at(offset) {\ttfamily\large He \textbf{sends} a email.\hphantom{0000000}};
+
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+8*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        ~~~~~~~~
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($12*(u)$);
+
+            \node at(offset) {\ttfamily\large He \textbf{will do} his homework.};
+
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+10*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+        \end{tikzpicture}
+    \end{center}
+    谓语只能由动词充当，这一类动词称为谓语动词。
+
+\newpage
+
+\subsubsection{定语~~状语}
+    定语可以由形容词充当（修饰代词）：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($12*(u)$);
+
+            \node at(offset) {\ttfamily\large She is a very \textbf{cute} girl.};
+
+            \LiDrawContainer{($(b)+14*(u)+(-0.02,0)$)}{($(b)+18*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 定语}
+        \end{tikzpicture}
+    \end{center}
+    定语可以由形容词充当（修饰名词）：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13.5*(u)$);
+
+            \node at(offset) {\ttfamily\large This is a very \textbf{sweet} apple.};
+
+            \LiDrawContainer{($(b)+15*(u)+(-0.02,0)$)}{($(b)+20*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 定语}
+        \end{tikzpicture}
+    \end{center}
+    状语可以由副词充当（修饰形容词）：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13.5*(u)$);
+
+            \node at(offset) {\ttfamily\large This is a \textbf{very} sweet apple.};
+
+            \LiDrawContainer{($(b)+10*(u)+(-0.04,0)$)}{($(b)+14*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+        \end{tikzpicture}
+    \end{center}
+    状语可以由副词充当（修饰副词）：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($9*(u)$);
+
+            \node at(offset) {\ttfamily\large He runs \textbf{very} fast.};
+
+            \LiDrawContainer{($(b)+8*(u)+(-0.03,0)$)}{($(b)+12*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+        \end{tikzpicture}
+    \end{center}
+    状语可以由副词充当（修饰动词）：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($9*(u)$);
+
+            \node at(offset) {\ttfamily\large He runs very \textbf{fast}.};
+
+            \LiDrawContainer{($(b)+13*(u)+(-0.01,0)$)}{($(b)+17*(u)+(+0.07,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+        \end{tikzpicture}
+    \end{center}
+    定语可以由副词充当（修饰名词）：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($16*(u)$);
+
+            \node at(offset) {\ttfamily\large He will go to the village \textbf{below}.};
+
+            \LiDrawContainer{($(b)+26*(u)+(-0.00,0)$)}{($(b)+31*(u)+(+0.08,0)$)}{-0.2}{-0.3}{\footnotesize 定语}
+        \end{tikzpicture}
+    \end{center}
+    定语由介词词组充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($15.5*(u)$);
+
+            \node at(offset) {\ttfamily\large Pencil \textbf{inside the desk} is mine.};
+
+            \LiDrawContainer{($(b)+7*(u)+(-0.04,0)$)}{($(b)+22*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 定语}
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($15.5*(u)$);
+
+            \node at(offset) {\ttfamily\large Books \textbf{on the table} are hers.\hphantom{000}};
+
+            \LiDrawContainer{($(b)+6*(u)+(-0.04,0)$)}{($(b)+18*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 定语}
+        \end{tikzpicture}
+    \end{center}
+    状语由介词词组充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($15.5*(u)$);
+
+            \node at(offset) {\ttfamily\large She swims \textbf{in the swimming pool}.};
+
+            \LiDrawContainer{($(b)+10*(u)+(-0.02,0)$)}{($(b)+30*(u)+(+0.09,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+        \end{tikzpicture}
+    \end{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($15.5*(u)$);
+
+            \node at(offset) {\ttfamily\large She plays piano \textbf{in the morning}.};
+
+            \LiDrawContainer{($(b)+16*(u)+(-0.02,0)$)}{($(b)+30*(u)+(+0.09,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+        \end{tikzpicture}
+    \end{center}
+    定语通常由形容词充当，可以由副词充当，也可以由动词或介词词组或定语从句充当。\\[3mm]
+    状语通常由副词充当，不能由形容词充当，也可以由动词或介词词组或状语从句充当。
+
+\newpage
+
+\subsubsection{补语}
+    补语可以由形容词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14*(u)$);
+
+            \node at(offset) {\ttfamily\large These apples are very \textbf{sweet}.};
+
+            \LiDrawContainer{($(b)+22*(u)+(-0.00,0)$)}{($(b)+27*(u)+(+0.08,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    补语可以由名词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14*(u)$);
+
+            \node at(offset) {\ttfamily\large These are very sweet \textbf{apples}.};
+
+            \LiDrawContainer{($(b)+21*(u)+(-0.02,0)$)}{($(b)+27*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    补语可以由副词充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($8.5*(u)$);
+
+            \node at(offset) {\ttfamily\large The debate is \textbf{over}.};
+
+            \LiDrawContainer{($(b)+13*(u)+(-0.00,0)$)}{($(b)+17*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    补语可以由介词词组充当：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14*(u)$);
+
+            \node at(offset) {\ttfamily\large The garden is \textbf{in our school}.};
+
+            \LiDrawContainer{($(b)+14*(u)+(-0.00,0)$)}{($(b)+27*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    补语通常由形容词和名词充当，也可以由副词或介词词组或表语从句充当。\\[8mm]
+    补语中修饰主语的，称为主语补语，简称主补，也称表语。\\[3mm]
+    补语中修饰宾语的，称为宾语补语，简称宾补。\\[3mm]
+    宾语补语的情况：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($11.5*(u)$);
+
+            \node at(offset) {\ttfamily\large We elected him \textbf{monitor}.};
+
+            \LiDrawContainer{($(b)+15*(u)+(-0.00,0)$)}{($(b)+22*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 宾语补语}
+        \end{tikzpicture}
+    \end{center}
+    主语补语的情况：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($11.5*(u)$);
+
+            \node at(offset) {\ttfamily\large He was elected \textbf{monitor}.};
+
+            \LiDrawContainer{($(b)+15*(u)+(-0.00,0)$)}{($(b)+22*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语补语}
+        \end{tikzpicture}
+    \end{center}
+    当含有宾语补语的句子用于被动语态时，宾语主语互换位置，宾语补语变为主语补语。\\[3mm]
+
+\newpage
+
+\subsection{句子类型}
+    句子由不同的句子成分组成，不同的句子成分有序排列，形成不同的句子类型。\\[3mm]
+    句子类型中常用以下字母表示句子成分：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{40pt}|p{80pt}|p{100pt}}
+                \hline
+                字母&字母含义&句子成分\\ \hline
+                \,S&subject&主语\\ \hline
+                \,V&verb&谓语动词\\ \hline
+                \,O&object&宾语\\ \hline
+                \,C&complement&补语\\ \hline
+                \,A&adverial&状语\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{句子成分的字母表示}
+        \end{center}        
+    \end{table}\\
+    句子类型中有七个最为基本的句型：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{80pt}|p{120pt}}
+                \hline
+                句型简写&句型名称&谓语动词特征\\ \hline
+                \,SV&主-谓&不及物动词\\ \hline
+                \,SVA&主-谓-状&不及物动词\\ \hline
+                \,SVC&主-谓-补&连系动词\\ \hline
+                \,SVO&主-谓-宾&单宾语及物动词\\ \hline
+                \,SVOA&主-谓-宾-状&单宾语及物动词\\ \hline
+                \,SVOO&主-谓-宾-宾&双宾语及物动词\\ \hline
+                \,SVOC&主-谓-宾-补&复杂宾语及物动词\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{句子的基本句型}
+        \end{center}
+    \end{table}\\
+    上述句型中，句型\texttt{SVA~}可以看作句型\texttt{SV~}添加状语后的衍生。\\[3mm]
+    上述句型中，句型\texttt{SVOA~}可以看作句型\texttt{SVO~}添加状语后的衍生。\\[3mm]
+    因此有时可以略去这两种句型，视为五种基本句型。\\[6mm]
+    单宾语及物动词，其只能携带一个宾语。\\[3mm]
+    双宾语及物动词，其可以携带两个宾语。\\[3mm]
+    复杂宾语及物动词，其可以携带一个宾语和一个宾语补语。\\[6mm]
+
+\newpage
+
+\subsubsection{句型\texttt{SV}}
+    对于句型\texttt{SV}，即主-谓结构，其谓语动词是不及物动词。\\[3mm]
+    不及物动词指的是不连接宾语就有实际意义的动词。\\[3mm]
+    句型\texttt{SV\hphantom{A}}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($6.5*(u)$);
+
+            \node at(offset) {\ttfamily\large They laughed.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+4*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.05,0)$)}{($(b)+12*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+        \end{tikzpicture}
+    \end{center}\vspace{-5pt}
+
+\subsubsection{句型\texttt{SVA}}
+    对于句型\texttt{SVA}，即主-谓-状结构，其谓语动词是不及物动词。\\[3mm]
+    不及物动词指的是不连接宾语就有实际意义的动词。\\[3mm]
+    句型\texttt{SVA}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($10.5*(u)$);
+
+            \node at(offset) {\ttfamily\large They laughed happily.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+4*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.05,0)$)}{($(b)+12*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+13*(u)+(-0.05,0)$)}{($(b)+20*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+        \end{tikzpicture}
+    \end{center}
+
+\subsubsection{句型\texttt{SVC}}
+    对于句型\texttt{SVC}，即主-谓-补结构，其谓语动词是不及物动词，其补语为主语补语。\\[3mm]
+    连系动词指的是需要连接补语才有意义的动词。\\[3mm]
+    句型\texttt{SVC}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($7.5*(u)$);
+
+            \node at(offset) {\ttfamily\large They are happy.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.04,0)$)}{($(b)+4*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.05,0)$)}{($(b)+8*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+9*(u)+(-0.05,0)$)}{($(b)+14*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    句型\texttt{SVC}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($9*(u)$);
+
+            \node at(offset) {\ttfamily\large They are laughing.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.04,0)$)}{($(b)+4*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.05,0)$)}{($(b)+8*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+9*(u)+(-0.05,0)$)}{($(b)+17*(u)+(+0.07,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    句型\texttt{SVC}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13.5*(u)$);
+
+            \node at(offset) {\ttfamily\large She grow taller and taller.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+3*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+4*(u)+(-0.05,0)$)}{($(b)+8*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+9*(u)+(-0.05,0)$)}{($(b)+26*(u)+(+0.05,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    句型\texttt{SVC}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14*(u)$);
+
+            \node at(offset) {\ttfamily\large She stay in her own bedroom.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+3*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+4*(u)+(-0.05,0)$)}{($(b)+8*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+9*(u)+(-0.05,0)$)}{($(b)+27*(u)+(+0.07,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    连系动词最为常见的是\texttt{be}动词，其次还有\texttt{grow~}和\texttt{stay~}等动词。
+
+\newpage
+
+\subsubsection{句型\texttt{SVO}}
+    对于句型\texttt{SVO}，即主-谓-宾结构，其谓语动词是及物动词。\\[3mm]
+    及物动词指的是需连接宾语才有实际意义的动词，此处的为单宾语及物动词。\\[3mm]
+    句型\texttt{SVO~}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($12.5*(u)$);
+
+            \node at(offset) {\ttfamily\large He answered the question.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+2*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+11*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+12*(u)+(-0.05,0)$)}{($(b)+24*(u)+(+0.07,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+        \end{tikzpicture}
+    \end{center}
+
+\subsubsection{句型\texttt{SVOA}}
+    对于句型\texttt{SVOA}，即主-谓-宾-状结构，其谓语动词是及物动词。\\[3mm]
+    及物动词指的是需连接宾语才有实际意义的动词，此处的为单宾语及物动词。\\[3mm]
+    句型\texttt{SVOA~}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($16.5*(u)$);
+
+            \node at(offset) {\ttfamily\large He answered the question quickly.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+2*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+11*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+12*(u)+(-0.05,0)$)}{($(b)+24*(u)+(+0.07,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+            \LiDrawContainer{($(b)+25*(u)+(-0.03,0)$)}{($(b)+32*(u)+(+0.07,0)$)}{-0.2}{-0.3}{\footnotesize 状语}
+        \end{tikzpicture}
+    \end{center}
+
+\subsubsection{句型\texttt{SVOO}}
+    对于句型\texttt{SVOO}，即主-谓-宾-宾结构，其谓语动词是及物动词。\\[3mm]
+    及物动词指的是需连接宾语才有实际意义的动词，此处的为双宾语及物动词。\\[3mm]
+    句型\texttt{SVOO~}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14*(u)$);
+
+            \node at(offset) {\ttfamily\large He answered me the question.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+2*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+11*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+12*(u)+(-0.05,0)$)}{($(b)+14*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 间接宾语}
+            \LiDrawContainer{($(b)+15*(u)+(-0.03,0)$)}{($(b)+27*(u)+(+0.09,0)$)}{-0.2}{-0.3}{\footnotesize 直接宾语}
+        \end{tikzpicture}
+    \end{center}
+    句型\texttt{SVOO~}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);
+            \coordinate (a) at (0,+0.3);
+            \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14*(u)$);
+
+            \node at(offset) {\ttfamily\large He showed her his new watch.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+2*(u)+(+0.01,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.05,0)$)}{($(b)+9*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+10*(u)+(-0.05,0)$)}{($(b)+13*(u)+(+0.03,0)$)}{-0.2}{-0.3}{\footnotesize 间接宾语}
+            \LiDrawContainer{($(b)+14*(u)+(-0.05,0)$)}{($(b)+27*(u)+(+0.09,0)$)}{-0.2}{-0.3}{\footnotesize 直接宾语}
+        \end{tikzpicture}
+    \end{center}
+    在双宾语中，直接宾语通常是物，间接宾语通常是人。\\[3mm]
+    在双宾语中，删去间接宾语后句子仍然成立，删去直接宾语后句子不再成立。\\[3mm]
+    例如将第一个例句删去间接宾语改为\texttt{"He answered the question."}，句子仍然成立。\\[3mm]
+    例如将第一个例句删去直接宾语改为\texttt{"He answered me."}，句子不再成立。\\[3mm]
+    由此也可以辅助判断直接宾语和间接宾语。
+    
+\newpage
+
+\subsubsection{句型\texttt{SVOC}}
+    对于句型\texttt{SVOC}，即主-谓-宾-补结构，其谓语动词是及物动词，其补语为宾语补语。\\[3mm]
+    及物动词指的是需连接宾语才有实际意义的动词，此处的为复杂宾语及物动词。\\[3mm]
+    句型\texttt{SVOC~}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($11.5*(u)$);
+
+            \node at(offset) {\ttfamily\large We elected him monitor.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.07,0)$)}{($(b)+2*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.02,0)$)}{($(b)+10*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+11*(u)+(-0.00,0)$)}{($(b)+14*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+            \LiDrawContainer{($(b)+15*(u)+(-0.05,0)$)}{($(b)+22*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    句型\texttt{SVOC~}的例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($13*(u)$);
+
+            \node at(offset) {\ttfamily\large We painted the wall white.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.08,0)$)}{($(b)+2*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.04,0)$)}{($(b)+10*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+11*(u)+(-0.00,0)$)}{($(b)+19*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+            \LiDrawContainer{($(b)+20*(u)+(-0.02,0)$)}{($(b)+25*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+
+\subsubsection{关于含有状语的句型}
+    严格的说，并不是所有符合主-谓-状结构的都可以称为\texttt{SVA~}句型。\\[3mm]
+    严格的说，并不是所有符合主-谓-宾-状结构的都可以称为\texttt{SVOA~}句型。\\[3mm]
+    关键在于状语是否是必须的，若是则算作\texttt{SVA~}或\texttt{SVOA}，若否意义则算作\texttt{SV~}或\texttt{SVO}。\\[8mm]
+    不严格的\texttt{SVA~}例句：\vspace{-10pt}
+    \begin{center}
+        \large
+        \ttfamily
+        They laughed happily.\\[3mm]
+        They laughed.\\[4mm]
+    \end{center}
+    不严格的\texttt{SVOA~}例句：\vspace{-5pt}
+    \begin{center}
+        \large
+        \ttfamily
+        He answered the question quickly.\\[3mm]
+        He answered the question.\\[4mm]
+    \end{center}
+    两者删去状语后仍有明确意义，因此严格意义上不能算作\texttt{SVA~}和\texttt{SVOA~}句型。\\[12mm]
+    较严格的\texttt{SVA~}例句：\vspace{-5pt}
+    \begin{center}
+        \large
+        \ttfamily
+        He stayed in a hotel.\\[4mm]
+    \end{center}
+    较严格的\texttt{SVOA~}例句：\vspace{-5pt}
+    \begin{center}
+        \large
+        \ttfamily
+        He treated me fair.\\[4mm]
+    \end{center}
+    两者删去状语后没有明确意义，因此严格意义上可以算作\texttt{SVA~}和\texttt{SVOA~}句型。
+
+\newpage
+
+\subsection{句子语序}
+    句子语序基本遵循七种基本句型的语序，需要进一步说明的是宾语定语状语在句中的位置。
+
+\subsubsection{谓语动词为短语动词时宾语的位置}
+    当谓语动词为“动词+副词”的结构时，称其为短语动词。\\[3mm]
+    当宾语为名词时，可以放置在动词和副词之后：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($16.5*(u)$);
+
+            \node at(offset) {\ttfamily\large They put aside \textbf{their differences}.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.08,0)$)}{($(b)+4*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.06,0)$)}{($(b)+8*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 动词}
+            \LiDrawContainer{($(b)+9*(u)+(-0.00,0)$)}{($(b)+14*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 副词}
+            \LiDrawContainer{($(b)+15*(u)+(-0.02,0)$)}{($(b)+32*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+        \end{tikzpicture}
+    \end{center}
+    当宾语为名词时，可以放置在动词与副词之间：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($16.5*(u)$);
+
+            \node at(offset) {\ttfamily\large They put \textbf{their differences} aside.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.08,0)$)}{($(b)+4*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.06,0)$)}{($(b)+8*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 动词}
+            \LiDrawContainer{($(b)+9*(u)+(-0.00,0)$)}{($(b)+26*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+            \LiDrawContainer{($(b)+27*(u)+(-0.02,0)$)}{($(b)+32*(u)+(+0.06,0)$)}{-0.2}{-0.3}{\footnotesize 副词}
+        \end{tikzpicture}
+    \end{center}
+    当宾语为代词时，只能放置在动词与副词之间：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($10*(u)$);
+
+            \node at(offset) {\ttfamily\large They put \textbf{them} aside.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.04,0)$)}{($(b)+4*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.04,0)$)}{($(b)+8*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 动词}
+            \LiDrawContainer{($(b)+9*(u)+(-0.00,0)$)}{($(b)+13*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+            \LiDrawContainer{($(b)+14*(u)+(-0.02,0)$)}{($(b)+19*(u)+(+0.06,0)$)}{-0.2}{-0.3}{\footnotesize 副词}
+        \end{tikzpicture}
+    \end{center}
+    当谓语是短语动词且宾语为名词时，可以放在动词和副词之间，可以放在动词与副词之后。\\[3mm]
+    当谓语是短语动词且宾语为代词时，只能放在动词和副词之间。
+
+\subsubsection{谓语动词为介词动词时宾语的位置}
+    当谓语动词为“动词+介词”的结构时，称其为介词动词。\\[3mm]
+    当宾语为名词时，只能放置在动词和副词之后：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($18.5*(u)$);
+
+            \node at(offset) {\ttfamily\large They looked at \textbf{the pencil in the box}.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.08,0)$)}{($(b)+4*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.04,0)$)}{($(b)+11*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 动词}
+            \LiDrawContainer{($(b)+12*(u)+(-0.00,0)$)}{($(b)+14*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 介词}
+            \LiDrawContainer{($(b)+15*(u)+(-0.02,0)$)}{($(b)+36*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+        \end{tikzpicture}
+    \end{center}
+    当宾语为代词时，只能放置在动词与副词之后：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14.5*(u)$);
+
+            \node at(offset) {\ttfamily\large They looked at \textbf{it in the box}.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.08,0)$)}{($(b)+4*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+5*(u)+(-0.04,0)$)}{($(b)+11*(u)+(+0.02,0)$)}{-0.2}{-0.3}{\footnotesize 动词}
+            \LiDrawContainer{($(b)+12*(u)+(-0.00,0)$)}{($(b)+14*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 介词}
+            \LiDrawContainer{($(b)+15*(u)+(-0.02,0)$)}{($(b)+28*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 宾语}
+        \end{tikzpicture}
+    \end{center}
+    当谓语是短语动词且宾语为名词时，只能放在动词与副词之后。\\[3mm]
+    当谓语是短语动词且宾语为代词时，只能放在动词与副词之后。
+
+\newpage
+
+\subsubsection{间接宾语必须前置的情况}
+    当双宾语结构中的谓语动词为：
+    \begin{center}
+        \ttfamily
+        cost~envy~fine~save~take~wish
+    \end{center}
+    此时间接宾语必须前置：
+    \begin{center}
+        \large
+        \ttfamily
+        It cost \textbf{me one hundred dollars}.\\[3mm]
+        I envy \textbf{you your great success}.\\[3mm]
+    \end{center}
+    该情况下间接宾语必须在直接宾语前，此时间接宾语前不用添加介词。\vspace{10pt}
+
+\subsubsection{间接宾语必须后置的情况}
+    当双宾语结构中的谓语动词为：
+    \begin{center}
+        \ttfamily
+        explain~suggest~describe
+    \end{center}
+    此时间接宾语必须后置：
+    \begin{center}
+        \large
+        \ttfamily
+        I suggest \textbf{a new method} to \textbf{them}.\\[3mm]
+        I explain \textbf{the schedule} to \textbf{them}.\\[3mm]
+    \end{center}
+    该情况下间接宾语必须在直接宾语后，此时间接宾语前需要添加介词。\vspace{10pt}
+
+\subsubsection{间接宾语位置不限的情况}
+    当双宾语结构中的谓语动词为：
+    \begin{center}
+        \ttfamily
+        bring~buy~get~give~leave~lend~make~offer~owe\\[3mm]
+        pay~send~show~tell
+    \end{center}\vspace{10pt}
+    此时间接宾语的位置不限：
+    \begin{center}
+        \large
+        \ttfamily
+        He gives \textbf{me a toy}.\\[3mm]
+        He gives \textbf{a toy} to \textbf{me}.\\[3mm]
+    \end{center}
+    此时间接宾语的位置不限：
+    \begin{center}
+        \large
+        \ttfamily
+        I will make \textbf{you a coffee}.\\[3mm]
+        I will make \textbf{a coffee} for \textbf{you}.\\[3mm]
+    \end{center}
+    该情况下间接宾语既可以在直接宾语前，此时间接宾语前不用添加介词。\\[3mm]
+    该情况下间接宾语也可以在直接宾语后，此时间接宾语前需要添加介词。
+
+\newpage
+
+\subsubsection{形容词词组修饰名词时的定语后置}
+    当形容词词组修饰名词时，定语需要后置：
+    \begin{center}
+        \large
+        \ttfamily
+        I have a \textbf{black} coat.\\[3mm]
+        I have a coat \textbf{with black buttons}.\\[8mm]
+    \end{center}
+    对于表示度量的形容词词组，若为分离形式则定语需要后置。
+    \begin{center}
+        \large
+        \ttfamily
+        This is a valley \textbf{three hundred feet deep}.\\[3mm]
+        This is a \textbf{three-hundred-feet-deep valley}.\\[8mm]
+    \end{center}
+    对于表示度量的形容词词组，若为复合形式则定语需要前置。
+    \begin{center}
+        \large
+        \ttfamily
+        This built a skyscraper \textbf{two hundred meters high}.\\[3mm]
+        This built a \textbf{two-hundred-meters-high} skyscraper.
+    \end{center}\vspace{15pt}
+
+\subsubsection{形容词修饰不定代词时的定语后置}
+    当形容词修饰不定代词时，定语需要后置：
+    \begin{center}
+        \large
+        \ttfamily
+        They have \textbf{similar} customs.\\[3mm]
+        They have something \textbf{similar}.\\[5mm]
+    \end{center}
+    此处的不定代词限于：{\ttfamily something，anything，nothing，somebody，anybody，nobody}。
+
+\newpage
+
+\subsubsection{多个定语同时修饰的排列顺序}
+    定语通常放置在被修饰词前。\\[3mm]
+    当多个定语修饰时按照以下顺序排列：限定词、大小、形状、新旧、颜色、国籍、性质、用途。\\[3mm]
+    考虑以下例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($17.5*(u)$);
+
+            \node at(offset) {\ttfamily\large There is a basket of big red apple.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.10,0)$)}{($(b)+5*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+6*(u)+(-0.08,0)$)}{($(b)+8*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+9*(u)+(-0.06,0)$)}{($(b)+20*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 限定词}
+            \LiDrawContainer{($(b)+21*(u)+(-0.02,0)$)}{($(b)+24*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 大小}
+            \LiDrawContainer{($(b)+25*(u)+(-0.02,0)$)}{($(b)+28*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 颜色}
+            \LiDrawContainer{($(b)+29*(u)+(-0.02,0)$)}{($(b)+34*(u)+(+0.08,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+    考虑以下例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($19.5*(u)$);
+
+            \node at(offset) {\ttfamily\large There is a basket of round juicy apple.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.10,0)$)}{($(b)+5*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+6*(u)+(-0.08,0)$)}{($(b)+8*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+9*(u)+(-0.06,0)$)}{($(b)+20*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 限定词}
+            \LiDrawContainer{($(b)+21*(u)+(-0.02,0)$)}{($(b)+26*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 形状}
+            \LiDrawContainer{($(b)+27*(u)+(-0.02,0)$)}{($(b)+32*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 性质}
+            \LiDrawContainer{($(b)+33*(u)+(-0.02,0)$)}{($(b)+38*(u)+(+0.08,0)$)}{-0.2}{-0.3}{\footnotesize 补语}
+        \end{tikzpicture}
+    \end{center}
+
+\subsubsection{多个状语同时修饰的排列顺序}
+    状语通常放置在被修饰词后。\\[3mm]
+    当多个状语修饰时按照以下顺序排列：方式、地点、时间、原因/结果/目的。\\[3mm]
+    考虑以下例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($22.5*(u)$);
+
+            \node at(offset) {\ttfamily\large We went straight to the park at noon for fun.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.10,0)$)}{($(b)+2*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.08,0)$)}{($(b)+7*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+8*(u)+(-0.06,0)$)}{($(b)+16*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 方式}
+            \LiDrawContainer{($(b)+17*(u)+(-0.02,0)$)}{($(b)+28*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 地点}
+            \LiDrawContainer{($(b)+29*(u)+(-0.02,0)$)}{($(b)+36*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 时间}
+            \LiDrawContainer{($(b)+37*(u)+(-0.02,0)$)}{($(b)+44*(u)+(+0.08,0)$)}{-0.2}{-0.3}{\footnotesize 目的}
+        \end{tikzpicture}
+    \end{center}
+    考虑以下例句：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($23*(u)$);
+
+            \node at(offset) {\ttfamily\large He went quickly to the hotel at night to stay.};
+
+            \LiDrawContainer{($(b)+0*(u)+(-0.10,0)$)}{($(b)+2*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 主语}
+            \LiDrawContainer{($(b)+3*(u)+(-0.08,0)$)}{($(b)+7*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 谓语}
+            \LiDrawContainer{($(b)+8*(u)+(-0.06,0)$)}{($(b)+15*(u)+(+0.00,0)$)}{-0.2}{-0.3}{\footnotesize 方式}
+            \LiDrawContainer{($(b)+16*(u)+(-0.02,0)$)}{($(b)+28*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 地点}
+            \LiDrawContainer{($(b)+29*(u)+(-0.02,0)$)}{($(b)+37*(u)+(+0.04,0)$)}{-0.2}{-0.3}{\footnotesize 时间}
+            \LiDrawContainer{($(b)+38*(u)+(-0.02,0)$)}{($(b)+45*(u)+(+0.06,0)$)}{-0.2}{-0.3}{\footnotesize 目的}
+        \end{tikzpicture}
+    \end{center}\vspace{10pt}
+    为了表示强调，可以将某些状语置于句首：
+    \begin{center}
+        \ttfamily
+        \large
+        \textbf{At noon}, we went straight to the park for fun.\\[3mm]
+        \textbf{At night}, he went quickly to the hotel to stay.\\[8mm]
+    \end{center}
+    当有多个时间状语时，按照从小到大的顺序排列：
+    \begin{center}
+        \ttfamily
+        \large
+        We took a trip \textbf{in the April, five years ago}.\\[8mm]
+    \end{center}
+    当有多个地点状语时，按照从小到大的顺序排列：
+    \begin{center}
+        \ttfamily
+        \large
+        We took a trip \textbf{to China, Shanghai, The Bund}.\\[8mm]
+    \end{center}
+
+\newpage
+
+\subsubsection{时间状语的情况}
+    时间状语包括：\vspace{-3pt}
+    \begin{center}
+        \ttfamily
+        last~~just~~already~~yet\\[6mm]
+    \end{center}
+    时间状语需要放在句中：\vspace{-3pt}
+    \begin{center}
+        \large
+        \ttfamily
+        He was \textbf{already} late for school.\\[6mm]
+    \end{center}
+    时间状语需要放在句中：\vspace{-3pt}
+    \begin{center}
+        \large
+        \ttfamily
+        He just \textbf{finished} the test.
+    \end{center}\vspace{10pt}
+
+\subsubsection{频度状语的情况}
+    频度状语包括：\vspace{-3pt}
+    \begin{center}
+        \ttfamily
+        always~~often~~seldom~~rarely\\[6mm]
+    \end{center}
+    频度状语需要放在句中：\vspace{-3pt}
+    \begin{center}
+        \large
+        \ttfamily
+        He \textbf{never} do his homework.\\[6mm]
+    \end{center}
+    频度状语需要放在句中：\vspace{-3pt}
+    \begin{center}
+        \large
+        \ttfamily
+        He \textbf{seldom} play video games.\\[6mm]
+    \end{center}
+    表示确定频度的状语可以放在句首：
+    \begin{center}
+        \large
+        \ttfamily
+        \textbf{Every day}, the zoo offers free tickets.\\[3mm]
+        \textbf{Once a year}, we go to the national park.\\[6mm]
+    \end{center}
+    表示确定频度的状语可以放在句首：
+    \begin{center}
+        \large
+        \ttfamily
+        The zoo offers free tickets \textbf{every day}.\\[3mm]
+        We go to the national park \textbf{once a year}.
+    \end{center}
+
+\newpage
+
+\subsubsection{表示否定意义的状语的情况}
+    表示否定意义的状语包括：\vspace{-3pt}
+    \begin{center}
+        \ttfamily
+        hardly~~scarcely~~barely\\[6mm]
+    \end{center}
+    表示否定意义的状语需要放在句中：
+    \begin{center}
+        \large
+        \ttfamily
+        The schedule \textbf{hardly} left any time for me.\\[3mm]
+        That ship was \textbf{barely} visible one the horizon.
+    \end{center}\vspace{10pt}
+
+\subsubsection{表示强调意义的状语的情况}
+    表示强调意义的状语包括：\vspace{-3pt}
+    \begin{center}
+        \ttfamily
+        in the world~~on earth~~ever\\[6mm]
+    \end{center}
+    表示强调意义的状语需要放在句中：
+    \begin{center}
+        \large
+        \ttfamily
+        What \textbf{ever} could I have lost it.\\[3mm]
+        How \textbf{on earth} could all this be explained.
+    \end{center}\vspace{10pt}
+
+\subsubsection{评说性状语的情况}
+    评说性状语包含：\vspace{-3pt}
+    \begin{center}
+        \ttfamily
+        naturally~~fortunately~~luckily~~surely~~certainly\\[6mm]
+    \end{center}
+    评说性状语需要放在句前：
+    \begin{center}
+        \large
+        \ttfamily
+        \textbf{Luckily}, things are starting to get better.\\[3mm]
+        \textbf{Certainly}, this proposition is true.
+    \end{center}\vspace{10pt}
+
+\subsubsection{连接性状语的情况}
+    连接性状语包括：\vspace{-3pt}
+    \begin{center}
+        \ttfamily
+        however~~thus~~therefore~~still~~yet~~above all\\[6mm]
+    \end{center}
+    连接性状语需要放在句前：
+    \begin{center}
+        \large
+        \ttfamily
+        \textbf{Howerver}, we lost the game.\\[3mm]
+        \textbf{Therefore}, he began to study hard.
+    \end{center}
+
+\newpage
+
+\subsubsection{副词\texttt{enough~}做状语的情况}
+    副词\texttt{enough~}必须置于所修饰的形容词之后：
+    \begin{center}
+        \large
+        \ttfamily
+        The runway is long \textbf{enough}.
+    \end{center}\vspace{10pt}
+    副词\texttt{enough~}必须置于所修饰的副词之后：
+    \begin{center}
+        \large
+        \ttfamily
+        You have been working long \textbf{enough}.
+    \end{center}\vspace{10pt}
+    副词\texttt{enough~}可以置于所修饰的名词之后：
+    \begin{center}
+        \large
+        \ttfamily
+        He has money \textbf{enough} to buy a car.
+    \end{center}\vspace{10pt}
+    副词\texttt{enough~}可以置于所修饰的名词之前：
+    \begin{center}
+        \large
+        \ttfamily
+        He has \textbf{enough} money to buy a car.
+    \end{center}\vspace{10pt}
+    副词\texttt{enough~}在修饰时，必须置于形容词和副词之后，可以置于名词后，可以置于名词前。
+
+\newpage
+
+\section{名词}
+    名词（{\ttfamily noun}）是用于表示人、事、物、地点、抽象概念的词语。\\[3mm]
+    名词可以分为：可数名词（{\ttfamily countable noun}），不可数名词（{\ttfamily uncountable noun}）。\\[3mm]
+    在名词中，可数名词表示可以个别存在的事物：人，物体，动物，植物，团体。\\[3mm]
+    在名词中，不可数名词表示不能个别存在的事物：物质形态，抽象概念。
+
+\subsection{名词的定量表示}
+    名词可以进行定量表示，从而表示一个确定的数量。\\[3mm]
+    然而，基数词只可以修饰可数名词，基数词不能修饰不可数名词。\\[3mm]
+    但是，某些不可数名词可以通过与单位词连用表示定量概念。
+
+\subsubsection{表示个数的单位词}    
+    以下单位词可以用于表示个数：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{50pt}|p{150pt}|p{60pt}}
+                \hline
+                a piece&一张&a piece of paper&一张纸\\ \hline
+                an item&一则&an item of news&一则新闻\\ \hline
+                an article&一件&an article of clothing&一件衣服\\ \hline
+                a bit&一片&a bit of wood&一片木头\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示个数的单位词}
+        \end{center}
+    \end{table}\vspace{-25pt}
+
+\subsubsection{表示形状的单位词}
+    以下单位词可以用于表示形状：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{50pt}|p{150pt}|p{60pt}}
+                \hline
+                a cake&一块&a cake of soap&一块肥皂\\ \hline
+                a bar&一条&a bar of chocolate&一条巧克力\\ \hline
+                a block&一块&a block of ice&一块糖\\ \hline
+                a lump&一块&a lump of sugar&一块冰\\ \hline
+                a loaf&一条&a loaf of bread&一条面包\\ \hline
+                a slice&一片&a slice of bread&一片面包\\ \hline
+                a grain&一粒&a grain of sand&一粒沙\\ \hline
+                a drop&一滴&a drop of water&一滴水\\ \hline
+                a heap&一堆&a heap of rubbish&一堆垃圾\\ \hline
+                a drift&一堆&a drift of snow&一堆积雪\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示形状的单位词}
+        \end{center}
+    \end{table}
+
+\newpage
+
+\subsubsection{表示容积的单位词}
+    以下单位词可以用于表示容积：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{50pt}|p{150pt}|p{60pt}}
+                \hline
+                a cup&一杯&a cup of tea&一杯茶\\ \hline
+                a bucket&一桶&a bucket of water&一桶水\\ \hline
+                a bottle&一瓶&a bottle of milk&一瓶牛奶\\ \hline
+                a glass&一杯&a glass of milk&一杯牛奶\\ \hline
+                a tube&一管&a tube of toothpaste&一管牙膏\\ \hline
+                a bowl&一碗&a bowl of rice&一碗米饭\\ \hline
+                a bag&一袋&a bag of wheat&一袋小麦\\ \hline
+                a spoonful&一勺&a spoonful of soup&一勺汤\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示容积的单位词}
+        \end{center}
+    \end{table}\vspace{-25pt}
+
+\subsubsection{表示状态的单位词}
+    以下单位词可以用于表示状态：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{50pt}|p{150pt}|p{60pt}}
+                \hline
+                a fit&一阵&a fit of anger&一阵生气\\ \hline
+                a burst&一阵&a burst of laughter&一阵笑声\\ \hline
+                a gust&一阵&a gust of wind&一阵风\\ \hline
+                a flash&一道&a flash of lighting&一道闪电\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{表示状态的单位词}
+        \end{center}
+    \end{table}\vspace{-25pt}
+
+\subsubsection{兼可用于可数名词的单位词}
+    以下单位词兼可用于可数名词：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{50pt}|p{150pt}|p{60pt}}
+                \hline
+                a pair&一条&a pair of trousers&一条裤子\\ \hline
+                a set&一套&a set of teacups&一套茶具\\ \hline
+                a couple&一对&a couple of rabbits&一对家兔\\ \hline
+                a troop&一队&a troop of tanks&一队坦克\\ \hline
+                a group&一群&a group of soldiers&一群士兵\\ \hline
+                a crowd&一群&a crowd of people&一群人\\ \hline
+                a bunch&一串&a bunch of keys&一串钥匙\\ \hline
+                a party&一组&a party of climbers&一组登山者\\ \hline
+                a packet&一包&a packet of cigarettes&一包香烟\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{兼可用于名词的单位词}
+        \end{center}
+    \end{table}\vspace{-25pt}
+
+\newpage
+
+\subsection{名词的不定量表示}
+    名词可以进行不定量表示，从而表示一个不确定的数量。
+
+\subsubsection{可以同时修饰两者的不定量表示}
+    以下词语可以同时修饰两者：
+    \begin{center}
+        \ttfamily
+        some~~any~~plenty of~~a lot of~~a large quantity of\\[6mm]
+    \end{center}
+    考虑以下例句：
+    \begin{center}
+        \large\ttfamily
+        I have \textbf{some} eggs.\\[3mm]
+        I have \textbf{some} sugar.\\[3mm]
+        Do you have \textbf{any} eggs?\\[3mm]
+        Do you have \textbf{any} sugar?
+    \end{center}\vspace{5pt}
+
+\subsubsection{可以修饰可数名词的不定量表示}
+    以下词语可以修饰可数名词：
+    \begin{center}
+        \ttfamily
+        many~~few~~a number of\\[6mm]
+    \end{center}
+    考虑以下例句：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{many} eggs.\\[3mm]
+        We have \textbf{few} eggs.\\[6mm]
+    \end{center}
+    需要注意的是\texttt{a few~}和\texttt{few~}的区别，两者均表示少，前者表示肯定，后者表示否定。
+
+\subsubsection{可以修饰不可数名词的不定量表示}
+    以下词语可以修饰不可数名词：
+    \begin{center}
+        \ttfamily
+        much~~little~~a large amount of\\[6mm]
+    \end{center}
+    考虑以下例句：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{much} sugar.\\[3mm]
+        We have \textbf{little} sugar.\\[6mm]
+    \end{center}
+    需要注意的是\texttt{a little~}和\texttt{little~}的区别，两者均表示少，前者表示肯定，后者表示否定。
+
+\newpage
+
+\subsection{名词的复数}
+    名词中的可数名词具有单数和复数两种形式。\\[3mm]
+    一般名词的复数在词尾加\texttt{-s}：
+    \begin{center}
+        \ttfamily
+        apple-apple\textbf{s}\\[3mm]
+        pear-pear\textbf{s}\\[6mm]
+    \end{center}
+    以辅音字母和\texttt{-y\hspace{2pt}}结尾的，需要去\texttt{-y\hspace{2pt}}加\texttt{-ies}：
+    \begin{center}
+        \ttfamily
+        butterfl\textbf{y}-butterfl\textbf{ies}\\[3mm]
+        laborator\textbf{y}-laborator\textbf{ies}\\[6mm]
+    \end{center}
+    以元音字母和\texttt{-y\hspace{2pt}}结尾的，需要直接加\texttt{-s}：
+    \begin{center}
+        \ttfamily
+        holiday-holiday\textbf{s}\\[3mm]
+        journey-journey\textbf{s}\\[6mm]
+    \end{center}
+    以\texttt{-o\hspace{2pt}}结尾的，多数需要添加\texttt{-s}：
+    \begin{center}
+        \ttfamily
+        bamboo-bamboo\textbf{s}\\[3mm]
+        radio-raio\textbf{s}\\[3mm]
+        studio-studio\textbf{s}\\[3mm]
+        auto-auto\textbf{s}\\[3mm]
+        photo-photo\textbf{s}\\[3mm]
+        piano-piano\textbf{s}\\[6mm]
+    \end{center}
+    以\texttt{-o\hspace{2pt}}结尾的，少数需要添加\texttt{-es}：
+    \begin{center}
+        \ttfamily
+        potato-potato\textbf{es}\\[3mm]
+        tomato-tomato\textbf{es}\\[3mm]
+        echo-echo\textbf{es}\\[3mm]
+        hero-hero\textbf{es}\\[6mm]
+    \end{center}
+    通常来说，无生命的名词倾向于使用\texttt{-s}，有生命的名词倾向于使用\texttt{-s}。\\[3mm]
+    通常来说，在\texttt{-o\hspace{2pt}}为元音字母或为缩略词的趋向于使用\texttt{-s}。
+
+\newpage
+
+    以\texttt{-f\hspace{2pt}}结尾的，多数需要直接添加\texttt{-s}：
+    \begin{center}
+        \ttfamily
+        roof-roof\textbf{s}\\[3mm]
+        gulf-gulf\textbf{s}\\[3mm]
+        belief-belief\textbf{s}\\[3mm]
+        chief-chief\textbf{s}\\[6mm]
+    \end{center}
+    以\texttt{-f\hspace{2pt}}结尾的，少数需去\texttt{-f}加\texttt{-ves}：
+    \begin{center}
+        \ttfamily
+        lea\textbf{f}-lea\textbf{ves}\\[3mm]
+        hal\textbf{f}-hal\textbf{ves}\\[3mm]
+        shel\textbf{f}-shel\textbf{ves}\\[3mm]
+        thie\textbf{f}-thie\textbf{ves}\\[3mm]
+        wol\textbf{f}-wol\textbf{ves}\\[6mm]
+    \end{center}
+    以\texttt{-fe\hspace{2pt}}结尾的，多数需要直接添加\texttt{-s}：
+    \begin{center}
+        \ttfamily
+        safe-safe{s}\\[6mm]
+    \end{center}
+    以\texttt{-fe\hspace{2pt}}结尾的，少数需去\texttt{-fe}加\texttt{-ves}：
+    \begin{center}
+        \ttfamily
+        kni\textbf{fe}-kni\textbf{ves}\\[6mm]
+    \end{center}
+    以\texttt{-s\hspace{2pt}}结尾的，需要添加\texttt{-es\hspace{2pt}}：
+    \begin{center}
+        \ttfamily
+        class-class\textbf{es}\\[6mm]
+    \end{center}
+    以\texttt{-x\hspace{2pt}}结尾的，需要添加\texttt{-es\hspace{2pt}}：
+    \begin{center}
+        \ttfamily
+        fox-fox\textbf{es}\\[6mm]
+    \end{center}
+    以\texttt{-ch\hspace{2pt}}结尾的，需要添加\texttt{-es\hspace{2pt}}：
+    \begin{center}
+        \ttfamily
+        bench-bench\textbf{es}\\[6mm]
+    \end{center}
+    以\texttt{-sh\hspace{2pt}}结尾的，需要添加\texttt{-es\hspace{2pt}}：
+    \begin{center}
+        \ttfamily
+        brush-brush\textbf{es}
+    \end{center}
+
+\newpage
+
+    某些名词的复数变换不规则：
+    \begin{center}
+        \ttfamily
+        child-children\\[2mm]
+        man-men\\[2mm]
+        foot-feet\\[2mm]
+        mouse-mice\\[2mm]
+        tooth-teeth\\[2mm]
+        goose-geese\\[2mm]
+        ox-oxen\\[6mm]
+    \end{center}
+    某些名词是单复数同形：
+    \begin{center}
+        \ttfamily
+        deer-deer\\[2mm]
+        sheep-sheep\\[2mm]
+        means-means\\[2mm]
+        species-species\\[2mm]
+        aircraft-aircraft\\[2mm]
+        series-series\\[2mm]
+        fish-fish\\[2mm]
+        duck-duck\\[2mm]
+        Chinese-Chinese\\[2mm]
+        Japanese-Japanese\\[8mm]
+    \end{center}
+    有些复合名词的复数将第一组成词变为复数：
+    \begin{center}
+        \ttfamily
+        son-in-law~-~son\textbf{s}-in law\\[3mm]
+        daughter-in-law~-~daughter\textbf{s}-in law\\[6mm]
+    \end{center}
+    有些复合名词的复数将第二组成词变为复数：
+    \begin{center}
+        \ttfamily
+        grown-up~-~grown-up\textbf{s}\\[3mm]
+        close-up~-~close-up\textbf{s}\\[6mm]
+    \end{center}
+    有些复合名词的复数将两个组成词都变为复数：
+    \begin{center}
+        \ttfamily
+        woman doctor~-~women doctor\textbf{s}
+    \end{center}
+
+\newpage
+
+\subsection{名词属格}
+    名词属格表示名词在句中与其他名词的关系。\\[3mm]
+    名词属格分为\texttt{'s\hspace{2pt}}属格和\texttt{\hspace{3pt}of}属格。
+
+\subsubsection{属格\texttt{'s}}
+    一般的名词后添加\texttt{('s)}：
+    \begin{center}
+        \ttfamily
+        the child's book\\[6mm]
+    \end{center}
+    不规则复数名词后添加\texttt{('s)}：
+    \begin{center}
+        \ttfamily
+        the children's books\\[6mm]
+    \end{center}
+    以\texttt{-s\hphantom{e}\hspace{2pt}}结尾复数名词后添加\texttt{(')}：
+    \begin{center}
+        \ttfamily
+        the lawyers' works\\[6mm]
+    \end{center}
+    以\texttt{-es\hspace{2pt}}结尾复数名词后添加\texttt{(')}：
+    \begin{center}
+        \ttfamily
+        the heroes' works\\[6mm]
+    \end{center}
+    以下词组表示两人共同拥有的船（一艘船）：
+    \begin{center}
+        \ttfamily
+        Tom and Jerry's boat.\\[6mm]
+    \end{center}
+    以下词组表示两人分别拥有的船（两艘船）
+    \begin{center}
+        \ttfamily
+        Tom's and Jerry's boats.\\[6mm]
+    \end{center}
+    若名词后有同位语，则\texttt{('s)}一般放在同位语后：
+    \begin{center}
+        \ttfamily
+        his teacher Miss Green's office.\\[3mm]
+        his uncle Black's house.\\[6mm]
+    \end{center}
+    通常来说，属格\texttt{\hspace{2pt}'s}用于有生命的物体。
+
+\subsubsection{属格\texttt{\hspace{3pt}of}}
+    一般在两个名词间添加\texttt{\hspace{3pt}(of)}：
+    \begin{center}
+        \ttfamily
+        the front door of supermarket.\\[3mm]
+        the manager of supermarket.\\[6mm]
+    \end{center}
+    通常来说，属格\texttt{\hspace{3pt}of}用于无生命的物体。
+
+\newpage
+
+\subsubsection{可以使用两种属格的情况}
+    表示所有有生命的名词：
+    \begin{center}
+        \ttfamily
+        the pilot's son\\[2mm]
+        the son of the pilot\\[6mm]
+    \end{center}
+    表示部分无生命的名词：
+    \begin{center}
+        \ttfamily
+        the book's title\\[2mm]
+        the title of the book\\[5mm]
+        the car's engine\\[2mm]
+        the engine of the car\\[5mm]
+        the ship's sails\\[2mm]
+        the sails of the ship\\[5mm]
+        the oceans's waves\\[2mm]
+        the wave of the ocean\\[6mm]
+    \end{center}
+    表示天体的名词：
+    \begin{center}
+        \ttfamily
+        The sun's heat\\[2mm]
+        The heat of the sun\\[5mm]
+        The moon's surface\\[2mm]
+        The surface fo the moon\\[6mm]
+    \end{center}
+    表示机构的名词：
+    \begin{center}
+        \ttfamily
+        The government's budget\\[2mm]
+        The budget of the government\\[6mm]
+    \end{center}
+    表示地区的名词：
+    \begin{center}
+        \ttfamily
+        The country's space program\\[2mm]
+        The space program of the country\\[6mm]
+    \end{center}
+
+\newpage
+
+    某些时候\texttt{\hspace{2pt}'s}属格倾向于表达所属（他所拍摄的照片）：
+    \begin{center}
+        \ttfamily
+        Tom's photo\\[6mm]
+    \end{center}
+    某些时候\texttt{\hspace{2pt}of}属格倾向于表达有关（他为主体的照片）：
+    \begin{center}
+        \ttfamily
+        The photo of Tom
+    \end{center}
+
+\subsubsection{必须用\texttt{\hspace{2pt}of}属格的情况}
+    表示部分或全部：
+    \begin{center}
+        \ttfamily
+        The part of the sea\\[3mm]
+        The majority of peopke\\[6mm]
+    \end{center}
+    表示抽象的概念：
+    \begin{center}
+        \ttfamily
+        means of transport\\[3mm]
+        news of importance
+    \end{center}
+
+\subsubsection{必须用\texttt{\hspace{2pt}'s}属格的情况}
+    表示时间：
+    \begin{center}
+        \ttfamily
+        four months' journey\\[3mm]
+        five weeks' absence\\[6mm]
+    \end{center}
+    表示度量：
+    \begin{center}
+        \ttfamily
+        ten kilometers' distance\\[3mm]
+        two tons' weight\\[6mm]
+    \end{center}
+    表示货币：
+    \begin{center}
+        \ttfamily
+        fifty dollars' product\\[6mm]
+    \end{center}
+    表示类别：
+    \begin{center}
+        \ttfamily
+        student's book\\[3mm]
+        teacher's book\\[3mm]
+        children's literature\\[6mm]
+    \end{center}
+    需要注意的是，有生命的名词表示类别才使用\texttt{\hspace{2pt}'s}属格，无生命的名词表示类别应使用\texttt{\hspace{2pt}of}属格。
+
+\newpage
+
+\section{代词}
+    代词（{\ttfamily pronoun}）是用来替代名词的词语。\\[3mm]
+    代词可以分为：人称代词，物主代词，自身代词，指示代词，疑问代词，不定代词，相互代词。
+
+\subsection{人称代词}
+    人称代词分为主格和宾格。\\[3mm]
+    人称代词包含以下词语：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{140pt}|p{40pt}|p{40pt}|p{100pt}}
+                \hline
+                人称代词-主格（单数）&I&You&He~~She~~It\\ \hline
+                人称代词-主格（复数）&We&You&They\\ \hline
+                人称代词-宾格（单数）&Me&Your&Him~~Her~~It\\ \hline
+                人称代词-宾格（复数）&Us&You&Them\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{人称代词}
+        \end{center}
+    \end{table}\\
+    人称代词的主格在句中充当主语：
+    \begin{center}
+        \ttfamily\large
+        \textbf{She} talks to him.\\[6mm]
+    \end{center}
+    人称代词的宾格在句中充当动词宾语：
+    \begin{center}
+        \ttfamily\large
+        He helps \textbf{me}.\\[6mm]
+    \end{center}
+    人称单词的宾格在句中充当介词宾语：
+    \begin{center}
+        \ttfamily\large
+        He learns from \textbf{me}.\\[6mm]
+    \end{center}
+    人称单词的宾格在句中充当主语补语：
+    \begin{center}
+        \ttfamily\large
+        It is \textbf{him}.\\[3mm]
+        It wasn't \textbf{me}.\\[6mm]
+    \end{center}
+    由{\hspace{3pt}\ttfamily it}引导的强调结构中主语仍需用主格：\vspace{3pt}
+    \begin{center}
+        \ttfamily\large
+        It was \textbf{he} who protected the world.\\[3mm]
+        It was \textbf{she} that won the first prize.\\[6mm]        
+    \end{center}
+    此处通过强调结构强调了主语{\hspace{3pt}\ttfamily he}和主语{\hspace{3pt}\ttfamily she}。
+
+\newpage
+
+    在比较结构中既可以使用主格：
+    \begin{center}
+        \ttfamily\large
+        She got a better idea than \textbf{he}.\\[6mm]
+    \end{center}
+    在比较结构中也可以使用宾格：
+    \begin{center}
+        \ttfamily\large
+        She got a better idea than \textbf{him}.\\[6mm]
+    \end{center}
+    但是有时两者表达了不同的含义：
+    \begin{center}
+        \ttfamily\large
+        I love Kate better than \textbf{he}.\\[3mm]
+        I love Kate better than \textbf{him}.\\[6mm]
+    \end{center}
+    第一句用主格，译为我比他更喜欢凯特：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($15*(u)$);
+            \node at(offset) {\ttfamily\large I love Kate~~~~~~He love Kate.};
+            \LiDrawContainer[<-]{($(b)+4.0*(u)+(-0.03,-0.1)$)}{($(b)+22.0*(u)+(+0.03,-0.1)$)}{-0.3}{-0.3}{\small\ttfamily better}
+        \end{tikzpicture}
+    \end{center}
+    第二句用主格，译为我喜欢凯特胜过他：
+    \begin{center}
+        \begin{tikzpicture}
+            \coordinate (u) at (0.23,0);    \coordinate (a) at (0,+0.3);    \coordinate (b) at (0,-0.2);
+            \coordinate (offset) at ($14*(u)$);
+            \node at(offset) {\ttfamily\large I love Kate~~~~~~I love him.};
+            \LiDrawContainer[<-]{($(b)+4.0*(u)+(-0.03,-0.1)$)}{($(b)+21.0*(u)+(+0.03,-0.1)$)}{-0.3}{-0.3}{\small\ttfamily better}
+        \end{tikzpicture}
+    \end{center}\vspace{5pt}
+    在省略谓语中的主语习惯用宾语：
+    \begin{center}
+        \ttfamily\large
+        -I don't smoke.~~~~-\textbf{Me} neither.\\[8mm]
+    \end{center}
+    在省略谓语中的主语习惯用宾语：
+    \begin{center}
+        \ttfamily\large
+        -I like pork.~~~~-\textbf{Me} too.\\[6mm]
+    \end{center}
+    人称代词{\hspace{3pt}\ttfamily it}可以修饰无生命的东西：
+    \begin{center}
+        \ttfamily\large
+        This banana was still green when I ate \textbf{it}.\\[6mm]
+    \end{center}
+    人称代词{\hspace{3pt}\ttfamily it}可以修饰动物：
+    \begin{center}
+        \ttfamily\large
+        My cat is so cute when \textbf{it} falls asleep.\\[6mm]
+    \end{center}
+    人称代词{\hspace{3pt}\ttfamily it}可以修饰幼儿：
+    \begin{center}
+        \ttfamily\large
+        My baby is a bit awkward when \textbf{it} begins to walk.
+    \end{center}
+
+\newpage
+
+    人称代词{\hspace{3pt}\ttfamily it}可以指代上文中提到的事情：
+    \begin{center}
+        \ttfamily\large
+        I want to play games, but my schedule won't allow \textbf{it}.\\[6mm]
+    \end{center}
+    人称代词{\hspace{3pt}\ttfamily it}可以指代心目中的人或事情：
+    \begin{center}
+        \ttfamily\large
+        I didn't ask who \textbf{it} was when someone knock at the door.\\[6mm]
+    \end{center}
+    人称代词{\hspace{3pt}\ttfamily it}可以用作主语表示天气：
+    \begin{center}
+        \ttfamily\large
+        \textbf{It} is raining today.\\[4mm]
+    \end{center}
+    人称代词{\hspace{3pt}\ttfamily it}可以用作主语表示时间：
+    \begin{center}
+        \ttfamily\large
+        \textbf{It} is nine o'clock.\\[4mm]
+    \end{center}
+    人称代词{\hspace{3pt}\ttfamily it}可以用作主语表示距离：
+    \begin{center}
+        \ttfamily\large
+        \textbf{It} is fifty kilometers from here.\\[4mm]
+    \end{center}
+    某些结构惯用{\hspace{3pt}\ttfamily it}作主语：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{190pt}|p{60pt}}
+                \hline
+                It seems&似乎\\ \hline
+                It appears&似乎\\ \hline
+                It happens&恰好\\ \hline
+                It looks&看上去\\ \hline
+                It matters&有关系\\ \hline
+                It makes some difference&有关系\\ \hline
+                It makes no difference&没关系\\ \hline
+                It doesn't matter&没关系\\ \hline
+                It doesn't make any difference&没关系\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{惯用{\hspace{3pt}\ttfamily it}作主语的结构}
+        \end{center}
+    \end{table}\\
+    考虑以下例句：\vspace{-5pt}
+    \begin{center}
+        \ttfamily\large
+        \textbf{It} looks so amazing.\\[3mm]
+        \textbf{It} seems to be impossible.\\[6mm]
+    \end{center}
+    考虑以下例句：\vspace{5pt}
+    \begin{center}
+        \ttfamily\large
+        \textbf{It} makes no difference which party comes to power.\\[3mm]
+        \textbf{It} makes some difference which party comes to power.
+    \end{center}
+
+\newpage
+
+\subsection{物主代词}
+    物主代词代词分为形容词性和名词性。\\[3mm]
+    物主代词包含以下词语：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{140pt}|p{40pt}|p{40pt}|p{100pt}}
+                \hline
+                物主代词-形容词性（单数）&My&Your&His~~Her~~Its\\ \hline
+                物主代词-形容词性（复数）&Our&Your&Their\\ \hline
+                物主代词-名词性（单数）&Mine&Yours&His~~Hers~~Its\\ \hline
+                物主代词-名词性（复数）&Ours&Yours&Theirs\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{物主代词}
+        \end{center}
+    \end{table}\\
+    形容词性物主代词在句中充当名词修饰语：
+    \begin{center}
+        \ttfamily\large
+        This is \textbf{my} pencil.\\[3mm]
+        This is \textbf{his} notebook.\\[6mm]
+    \end{center}
+    名词性物主代词在句中充当主语：
+    \begin{center}
+        \ttfamily\large
+        Can I borrow your computer? \textbf{Mine} is broken.\\[3mm]
+        Can I borrow your computer? \textbf{My computer} is broken.\\[6mm]
+    \end{center}
+    名词性物主代词在句中充当宾语：
+    \begin{center}
+        \ttfamily\large
+        The teacher checked my answer and \textbf{hers}.\\[3mm]
+        The teacher checked my answer and \textbf{her answer}.\\[6mm]
+    \end{center}
+    名词性物主代词在句中充当补语：
+    \begin{center}
+        \ttfamily\large
+        This is his parents' idea, not \textbf{his}.\\[3mm]
+        This is his parents' idea, not \textbf{his idea}.\\[6mm]
+    \end{center}
+    形容词{\hspace{3pt}\ttfamily own}常用于形容词性物主代词后加强语气：
+    \begin{center}
+        \ttfamily\large
+        Even a boy could have \textbf{his own} opinions.\\[6mm]
+    \end{center}
+    代词{\hspace{3pt}\ttfamily own}也可作为补语或宾语并省略后面的名词：
+    \begin{center}
+        \ttfamily\large
+        Sometimes my time isn't \textbf{my own}.
+    \end{center}
+
+\newpage
+
+\subsection{自身代词}   
+    自身代词包含以下词语：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{85pt}|p{55pt}|p{60pt}|p{135pt}}
+                \hline
+                自身代词（单数）&Myself&Yourself&Hiself~~Herself~~Itself\\ \hline
+                自身代词（复数）&Ourselves&Yourselves&Theirselves \\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{自身代词}
+        \end{center}
+    \end{table}\\
+    自身代词可以在句中充当动词宾语：
+    \begin{center}
+        \ttfamily\large
+        The boy amused \textbf{himself} by plaing video games.\\[3mm]
+        The boy booked \textbf{himself} a flight.\\[6mm]
+    \end{center}
+    自身代词可以在句中充当介词宾语：
+    \begin{center}
+        \ttfamily\large
+        The children play with \textbf{themselves}.\\[3mm]
+        The children decide for \textbf{themselves}.\\[6mm]
+    \end{center}
+    自身代词可以在句中充当同位语：
+    \begin{center}
+        \ttfamily\large
+        As I was a stranger \textbf{myself}, I didn't know the city well.\\[6mm]
+    \end{center}
+    此处的同位语起到了强调的作用，强调了我自己也是陌生人。
+
+\newpage
+
+\subsection{指示代词}
+    指示代词是具有指示概念的代词。\\[3mm]
+    指示代词包含：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{70pt}}
+                \hline
+                this&这\\ \hline
+                that&那\\ \hline
+                these&这些\\ \hline
+                those&那些\\ \hline
+                such&如此\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{指示代词}
+        \end{center}
+    \end{table}\vspace{-30pt}
+
+\subsubsection{指示代词的近指和远指}
+    指示代词{\hspace{3pt}\ttfamily this}和{\hspace{3pt}\ttfamily these}指空间上距离说话人较近的事物：
+    \begin{center}
+        \large\ttfamily
+        \textbf{This} diamond is real.\\[2mm]
+        \textbf{These} diamonds are real.\\[4mm]
+    \end{center}
+    指示代词{\hspace{3pt}\ttfamily that}和{\hspace{3pt}\ttfamily those}指空间上距离说话人较远的事物：
+    \begin{center}
+        \large\ttfamily
+        \textbf{That} diamond is just glass.\\[2mm]
+        \textbf{Those} diamonds are just glass.\\[4mm]
+    \end{center}
+    在打电话时，看得到的一方用{\hspace{3pt}\ttfamily this}或{\hspace{3pt}\ttfamily these}：
+    \begin{center}
+        \large\ttfamily
+        Hello.~\textbf{This} is Tom.~Is that Bob?\\[4mm]
+    \end{center}
+    在打电话时，看不到的一方用{\hspace{3pt}\ttfamily that}或{\hspace{3pt}\ttfamily those}：
+    \begin{center}
+        \large\ttfamily
+        Hello.~This is Tom.~Is \textbf{that} Bob?
+    \end{center}
+
+\subsubsection{指示代词的替代作用}
+    指示代词\littf{that\hphantom{x}}可以代指上文中的名词：
+    \begin{center}
+        \large\ttfamily
+        The price of gold is much higher than \textbf{that} last month.\\[4mm]
+    \end{center}
+    指示代词\littf{those}可以代指上文中的名词：
+    \begin{center}
+        \large\ttfamily
+        The products of our company is better than those of others.\\[4mm]
+    \end{center}
+    指示代词\littf{those+who}可以引导定语从句：
+    \begin{center}
+        \large\ttfamily
+        The club is open only to those who are its member.\\[4mm]
+    \end{center}
+    此处表达了“...的人”的意思。
+
+\newpage
+
+\subsubsection{指示代词\littf{such}的用法}
+    指示代词\littf{such}可以作主语：
+    \begin{center}
+        \large\ttfamily
+        If \textbf{such} is the case, we can do nothing.\\[6mm]
+    \end{center}
+    指示代词\littf{such}可以作表语：
+    \begin{center}
+        \large\ttfamily
+        He claimed to be company manager, but he was not \textbf{such}.\\[6mm]
+    \end{center}
+    指示代词\littf{such}可以修饰不可数名词：
+    \begin{center}
+        \large\ttfamily
+        Money cannot give \textbf{such} true happiness.\\[6mm]
+    \end{center}
+    指示代词\littf{such}可以修饰复数可数名词：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Such} things can affect children.\\[6mm]
+    \end{center}
+    指示代词\littf{such}可以修饰单数可数名词：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Such} a video game can affect children.\\[6mm]
+    \end{center}
+    需要注意的是，其修饰单数可数名词时，名词前需要添加不定冠词。\\[8mm]
+    以下结构可以相互转换：
+    \begin{center}
+        \large\ttfamily
+        The Internet plays \textbf{such an important part} in out life.\\[3mm]
+        The Internet plays \textbf{so important a part} in our life.\\[6mm]
+    \end{center}
+    即结构\littf{"such~+不定冠词+形容词+名词"}，等价于\littf{"so~+形容词+不定冠词+名词"}。
+
+\newpage
+
+\subsection{疑问代词}
+    疑问代词是具有疑问概念的代词。\\[3mm]
+    疑问代词包含：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{70pt}}
+                \hline
+                who&谁（主格）\\ \hline
+                whom&谁（宾格）\\ \hline
+                whose&谁的（属格）\\ \hline
+                what&什么\\ \hline
+                which&哪一个\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{疑问代词}
+        \end{center}
+    \end{table}\vspace{-25pt}
+
+\subsubsection{疑问代词\littf{who}~~\littf{what}}
+    疑问代词\littf{who}用于询问别人的身份：
+    \begin{center}
+        \large\ttfamily
+        -Who is the girl?\hphantom{xxxx}\\[2mm]
+        -She is my classmate.\\[4mm]
+    \end{center}
+    疑问代词\littf{who}用于询问别人的身份：
+    \begin{center}
+        \large\ttfamily
+        -What is the girl?\hphantom{xxx}\\[2mm]
+        -She is a bank clerk.\\[4mm]
+    \end{center}
+
+\subsubsection{疑问代词\littf{which}~~\littf{who}}
+    使用\littf{which}提问必须给定范围：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Which} of them will be the monitor.\\[4mm]
+    \end{center}
+    使用\littf{\hphantom{x}who\hphantom{x}}提问无需给定范围：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Who} will be the monitor.
+    \end{center}
+
+\subsubsection{疑问代词\littf{which}~~\littf{what}}
+    使用\littf{which}提问必须给定范围：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Which} soup do you recommend between these two.\\[4mm]
+    \end{center}
+    使用\littf{what\hphantom{x}}提问无需给定范围：
+    \begin{center}
+        \large\ttfamily
+        \textbf{What} soup do you recommend.
+    \end{center}
+
+\newpage
+
+\subsubsection{疑问代词和介词连用的情况}
+    对于双宾语的情况，介词需提到句首：
+    \begin{center}
+        \large\ttfamily
+        \textbf{To whom} did give the report?\\[6mm]
+    \end{center}
+    对于单宾语的情况，若句中“动词+介词”作介词动词，介词需置于句末：
+    \begin{center}
+        \large\ttfamily
+        \textbf{What} are they looking \textbf{at}?\\[3mm]
+        \textbf{What} good idea did you come up \textbf{with}\\[6mm]
+    \end{center}
+    对于单宾语的情况，若句中“介词+名词”起状语作用，介词的位置任意：
+    \begin{center}
+        \large\ttfamily
+        \textbf{With whom} did they go on an picnic?\\[3mm]
+        \textbf{Whom} did they go on an picnic \textbf{with}?\\[6mm]
+    \end{center}\vspace{5pt}
+
+\subsubsection{疑问代词\littf{who}~~\littf{whose}~~\littf{whom}}
+    疑问代词\littf{whose}是\littf{who}的属格，用于明确所有者。\\[3mm]
+    疑问代词\littf{whom\hphantom{x}}是\littf{who}的宾格，用于明确对象。\\[3mm]
+    疑问代词\littf{whose}的用法：
+    \begin{center}
+        \large\ttfamily
+        -\textbf{Whose} iPhone is this?\\[3mm]
+        -It is my iPhone.\hphantom{xxxxx}\\[6mm]
+    \end{center}
+    疑问代词\littf{whose}的用法：
+    \begin{center}
+        \large\ttfamily
+        -\textbf{Whose} is this iPhone?\\[3mm]
+        -It is mine.\hphantom{xxxxxxxxxxx}\\[6mm]
+    \end{center}
+    对比\littf{who}和\littf{whom}的疑问句：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Who} is he.\\[3mm]
+        \textbf{Whom} did he hire\\[6mm]
+    \end{center}
+    若符合第一句的情况，即疑问代词和其后的人为同一个人，那么其作主语，应使用\littf{who}。\\[3mm]
+    若符合第二句的情况，即疑问代词和其后的人为不同的人，那么其作宾语，应使用\littf{whom}。
+
+\newpage
+
+\subsection{相互代词}
+    相互代词是表示动作和感觉在涉及的各个对象之间相互存在的代词。\\[3mm]
+    相互代词包含：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{70pt}}
+                \hline
+                each other&指两者之间\\ \hline
+                one another&指三者之间\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{相互代词}
+        \end{center}
+    \end{table}\\
+    相互代词\littf{each other\hphantom{x}}的用法：
+    \begin{center}
+        \large\ttfamily
+        They buy \textbf{each other} a special gift.\\[6mm]
+    \end{center}
+    相互代词\littf{one another}的用法：
+    \begin{center}
+        \large\ttfamily
+        The children are chasing \textbf{one another} on the playground.\\[6mm]
+    \end{center}
+    相互代词\littf{each other\hphantom{x}}有属格形式：
+    \begin{center}
+        \large\ttfamily
+        We know \textbf{each other's} weaknesses.\\[6mm]
+    \end{center}
+    相互代词\littf{one another}有属格形式：
+    \begin{center}
+        \large\ttfamily
+        They understand \textbf{one another's} views.\\[6mm]
+    \end{center}
+    虽然两个指示代词表达的意思有差异，但是两者的差异在逐步消失，经常可以交替混用。
+
+\newpage
+
+\subsection{不定代词}
+    不定代词具有名词特性和形容词特性，此处仅讨论其名词特性。
+
+\subsubsection{不定代词~\littf{one}~~\littf{ones}}
+    不定代词\littf{one\hphantom{s}}是单数形式，可以代指上文中出现过的单数可数名词。\\[3mm]
+    不定代词\littf{ones}是复数形式，可以代指上文中出现过的复数可数名词。\\[3mm]
+    考虑以下例句：
+    \begin{center}
+        \ttfamily\large
+        His childhood was a happy \textbf{one}.\\[3mm]
+        Their childhoods were happy \textbf{ones}.\\[6mm]
+    \end{center}
+    不定代词\littf{one(s)}可以带形容词：
+    \begin{center}
+        \ttfamily\large
+        My car is that \textbf{blue} one.\\[3mm]
+        These apples are the \textbf{sour} ones.\\[6mm]
+    \end{center}
+    不定代词\littf{one(s)}可以带限定词：
+    \begin{center}
+        \ttfamily\large
+        My car is \textbf{that} blue one.\\[3mm]
+        These apples are \textbf{the} sour ones.\\[6mm]
+    \end{center}
+    不定代词\littf{one(s)}可以带定语从句：
+    \begin{center}
+        \ttfamily\large
+        He is a hero, the one \textbf{who saved all of us}.\\[6mm]
+    \end{center}
+    然而\littf{ones}不可以被基数词修饰，如不能说\littf{two ones}，但可以说\littf{two big ones}。\\[10mm]
+    不定代词\littf{one}的反身形式为\littf{oneself}：
+    \begin{center}
+        \ttfamily\large
+        One must have time to \textbf{oneself}.\\[6mm]
+    \end{center}
+    不定代词\littf{one}的属格形式为\littf{one's}：
+    \begin{center}
+        \ttfamily\large
+        One usually spends one third of \textbf{one's} time in sleeps.\\[6mm]
+    \end{center}
+    不定代词\littf{one}还可以泛指任何人。
+
+\newpage
+
+\subsubsection{不定代词~\littf{one}与\littf{it}的比较}
+    不定代词\littf{one/ones}指代非特定事物，人称代词\littf{it}指代特定事物。\\[3mm]
+    以下句子中表示非特指（\texttt{one = a laptop}）：
+    \begin{center}
+        \ttfamily\large
+        If you don't have a laptop. I can lend you \textbf{one}.\\[6mm]
+    \end{center}
+    以下句子中表示特指（\texttt{it = the laptop}）：
+    \begin{center}
+        \ttfamily\large
+        Here is my new laptop. You may use \textbf{it}.
+    \end{center}\vspace{10pt}
+
+\subsubsection{不定代词~\littf{one}与\littf{that}的比较}
+    不定代词\littf{one/ones}指代非特定事物，指示代词\littf{that/those}指代特定事物。\\[3mm]
+    以下句子中表示非特指（\texttt{one = a photograph}）：
+    \begin{center}
+        \ttfamily\large
+        The project need a photograph of you, would you give me \textbf{one}?\\[6mm]
+    \end{center}
+    以下句子中表示特指（\texttt{that = the photograph}）：
+    \begin{center}
+        \ttfamily\large
+        The photograph of you is much better than \textbf{that} in your album.\\[6mm]
+    \end{center}
+    特指上文中复数名词的\littf{these}与\littf{the ones}可以互换：
+    \begin{center}
+        \ttfamily\large
+        My problems now are similar to \textbf{these} you had last year.\\[3mm]
+        My problems now are similar to \textbf{the ones} you had last year.
+    \end{center}\vspace{10pt}
+
+\subsubsection{不定代词~\littf{(some/any/no)+(body/thing)}}\vspace{5pt}
+    不定代词\littf{(some/any/no)+(body/thing)}的关系如下：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{60pt}|p{40pt}|p{60pt}|p{40pt}|p{60pt}|p{40pt}}
+                \hline
+                somebody&某人&anybody&任何人&nobody&没有人\\ \hline
+                something&某事&anything&任何事&nothing&没有谁\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{不定代词\littf{(some/any/no)+(body/thing)}的含义}
+        \end{center}
+    \end{table}\\
+    不定代词\littf{nobody}和\littf{nothing}通常用于肯定句。\\[3mm]
+    不定代词\littf{somebody}和\littf{something}通常用于肯定句。\\[3mm]
+    不定代词\littf{anybody}和\littf{anything}通常用于否定句或疑问句。
+
+
+\newpage
+
+    考虑以下例句：
+    \begin{center}
+        \ttfamily\large
+        There is \textbf{somebody} who can help us.\\[3mm]
+        There is \textbf{nobody} who can help us.\\[3mm]
+        Is there \textbf{anybody} who can help us?\\[6mm]
+    \end{center}
+    考虑以下例句：
+    \begin{center}
+        \ttfamily\large
+        There is \textbf{something} wrong.\\[3mm]
+        There is \textbf{noting} wrong.\\[3mm]
+        Is there \textbf{anything} wrong?\\[6mm]
+    \end{center}
+    疑问句中用\littf{some}表示期望得到肯定答复：
+    \begin{center}
+        \ttfamily\large
+        Is there \textbf{someone} who can save us?\\[3mm]
+        Is there \textbf{anyone} who can save us?\\[6mm]
+    \end{center}
+    疑问句中用\littf{some}表示期望得到肯定答复：
+    \begin{center}
+        \ttfamily\large
+        Is there \textbf{something} wrong?\\[3mm]
+        Is there \textbf{anything} wrong?\\[6mm]
+    \end{center}
+    肯定句也可以用\littf{any}表达任意：
+    \begin{center}
+        \ttfamily\large
+        Try to do \textbf{anything} you could.\\[3mm]
+        Try to contact \textbf{anybody} you know.\\[6mm]
+    \end{center}
+    当句中含有表达否定意义的结构时需用\littf{any}：
+    \begin{center}
+        \ttfamily\large
+        \textbf{Neither} she \textbf{nor} I show \textbf{any} interest in physic.\\[6mm]
+    \end{center}
+    当句中含有表达否定意义的副词时需用\littf{any}：
+    \begin{center}
+        \ttfamily\large
+        He \textbf{seldom} plays \textbf{any} video games.\\[3mm]
+        He \textbf{never} plays \textbf{any} video games.\\[6mm]
+    \end{center}
+    表达否定意义的副词包含：\littf{hardly}，\littf{scarcely}，\littf{seldom}，\littf{rarely}，\littf{never}。
+
+\newpage
+
+\subsubsection{不定代词~\littf{every one}~~\littf{everyone}~~\littf{everybody}~~\littf{each}}
+    不定代词\littf{every}后常加\littf{one of}表示某些人或物中的每一个：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Every one of} them has got an ice cream.\\[6mm]
+    \end{center}
+    不定代词\littf{each}后常加\littf{one of}表示某些人或物中的每一个：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Each one of} them has got an ice cream.\\[3mm]
+        \textbf{Each of} them has got an ice cream.\\[6mm]
+    \end{center}
+    其中\littf{each}后的\littf{one}也可以省略。\\[10mm]
+    不定代词\littf{everyone}表示每个人：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Everyone} has got a gift.\\[6mm]
+    \end{center}
+    不定代词\littf{everybody}表示每个人：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Everybody} has got a gift.\\[6mm]
+    \end{center}
+    有时\littf{every one}也可以替代\littf{everyone}或\littf{everybody}使用，但较为少见。\\[3mm]
+    然而\littf{everyone}和\littf{everybody}不可以后接\littf{of}引起的短语，而\littf{every one}则可以。\\[3mm]
+    不定代词\littf{everyone}侧重全体（强调所有的人）：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Everyone} was at the table.\\[6mm]
+    \end{center}
+    不定代词\littf{each}侧重个体（强调每一个人）：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Each} had their nameplate on the table.\\[6mm]
+    \end{center}
+    同时使用中，\littf{each}所指的对象应当在上下文中明确，\littf{everyone}则不必。
+
+\newpage
+
+\subsubsection{不定代词~\littf{no one}~~\littf{nobody}~~\littf{none}}
+    不定代词\littf{no}后常加\littf{one of}表示某些人或物中没有一个：
+    \begin{center}
+        \large\ttfamily
+        \textbf{No one of} us can equal her.\\[3mm]
+        \textbf{None of} us can equal her.\\[6mm]
+    \end{center}
+    其中\littf{no one}也可以用\littf{none}进行替代。\\[7mm]
+    不定代词\littf{nobody}表示没有人：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Nobody} can equal her.\\[6mm]
+    \end{center}
+    有时\littf{no one}也可以替代\littf{nobody}使用，但较为少见。\\[3mm]
+    然而\littf{nobody}不可以后接\littf{of}引起的短语，而\littf{no one}和\littf{none}则可以。\\[7mm]
+    不定代词\littf{none}不仅可以用于可数名词表示没有一个：
+    \begin{center}
+        \large\ttfamily
+        There is \textbf{none of} us can equal her.\\[6mm]
+    \end{center}
+    不定代词\littf{none}还可以用于不可数名词表示没有一点：
+    \begin{center}
+        \large\ttfamily
+        He has \textbf{none of} her father's talent.\\[6mm]
+    \end{center}
+    此外\littf{none but}意为只有：
+    \begin{center}
+        \large\ttfamily
+        \textbf{None but} fools have ever believe in such a story.\\[6mm]
+    \end{center}
+    回答关于人的提问可以用\littf{nobody}：
+    \begin{center}
+        \large\ttfamily
+        -Who is in the hall?~~-\textbf{Nobody}.\\[6mm]
+    \end{center}
+    回答关于物的提问可以用\littf{nothing}：
+    \begin{center}
+        \large\ttfamily
+        -What is in the box?~~-\textbf{Nothing}.\\[6mm]
+    \end{center}
+    回答可数名词数量的提问可以用\littf{none}：
+    \begin{center}
+        \large\ttfamily
+        -How much sugar is there in the sugar can?~~-\textbf{None}.\\[6mm]
+    \end{center}
+    回答不可数名词量的提问可以用\littf{none}：
+    \begin{center}
+        \large\ttfamily
+        -How many students are there in that room?~~-\textbf{None}.
+    \end{center}
+
+\newpage
+
+\subsubsection{不定代词~\littf{any one}~~\littf{anyone}~~\littf{anybody}}
+    不定代词\littf{any}后常加\littf{one of}表示某些人或物中的任意一个：
+    \begin{center}
+        \large\ttfamily
+        You can't help \textbf{any one of} us.\\[3mm]
+        You can't help \textbf{any of} us.\\[6mm]
+    \end{center}
+    其中\littf{any}后的\littf{one}也可以省略。\\[10mm]
+    不定代词\littf{anyone}表示任何人：
+    \begin{center}
+        \large\ttfamily
+        There isn't \textbf{anyone} who can help us.\\[6mm]
+    \end{center}
+    不定代词\littf{anyone}表示每个人：
+    \begin{center}
+        \large\ttfamily
+        There isn't \textbf{anybody} who can help us.\\[6mm]
+    \end{center}
+    有时\littf{any one}也可以替代\littf{anyone}或\littf{anybody}使用，但较为少见。\\[3mm]
+    然而\littf{anyone}和\littf{anybody}不可以后接\littf{of}引起的短语，而\littf{any one}则可以。
+
+\newpage
+
+\subsubsection{不定代词~\littf{some one}~~\littf{soemone}~~\littf{somebody}}
+    不定代词\littf{some}后常加\littf{one of}表示某些人或物中的任意一个：
+    \begin{center}
+        \large\ttfamily
+        You could help \textbf{some one of} us.\\[3mm]
+        You could help \textbf{some of} us.\\[6mm]
+    \end{center}
+    其中\littf{some}后的\littf{one}也可以省略。\\[10mm]
+    不定代词\littf{someone}表示任何人：
+    \begin{center}
+        \large\ttfamily
+        There is \textbf{someone} who can help us.\\[6mm]
+    \end{center}
+    不定代词\littf{anyone}表示每个人：
+    \begin{center}
+        \large\ttfamily
+        There is \textbf{somebody} who can help us.\\[6mm]
+    \end{center}
+    有时\littf{some one}也可以替代\littf{someone}或\littf{somebody}使用，但较为少见。\\[3mm]
+    然而\littf{someone}和\littf{soembody}不可以后接\littf{of}引起的短语，而\littf{some one}则可以。
+
+\newpage
+
+\subsubsection{不定代词~\littf{both}~~\littf{all}}
+    不定代词\littf{both}和\littf{all}的关系如下：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{50pt}|p{130pt}}
+                \hline
+                both&指代两个人或物的全体\\ \hline
+                all&指代多个人或物的全体\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{不定代词\littf{both}和\littf{all}的关系}
+        \end{center}
+    \end{table}\\
+    不定代词\littf{both}可以作主语：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Both} of the two apples are sweet.\\[6mm]
+    \end{center}
+    不定代词\littf{all}可以作主语：
+    \begin{center}
+        \large\ttfamily
+        \textbf{All} of the apples are sweet.\\[6mm]
+    \end{center}
+    不定代词\littf{both}可以作宾语：
+    \begin{center}
+        \large\ttfamily
+        I will take \textbf{both} of the two apples.\\[6mm]
+    \end{center}
+    不定代词\littf{all}可以作宾语：
+    \begin{center}
+        \large\ttfamily
+        I will take \textbf{all} of the apples.\\[6mm]
+    \end{center}
+    不定代词\littf{both}可以作同位语：
+    \begin{center}
+        \large\ttfamily
+        They \textbf{both} won the prizes in the contest.\\[3mm]
+        They were \textbf{both} the winners in the contest.\\[6mm]
+    \end{center}
+    不定代词\littf{all}可以作同位语：
+    \begin{center}
+        \large\ttfamily
+        They \textbf{all} joined the shooting club.\\[3mm]
+        They were \textbf{all} members of the shooting club.\\[6mm]
+    \end{center}
+    当\littf{both/all}后接\littf{"of~+~名词"}时，其中的\littf{of}也可以省略。
+
+\newpage
+
+\subsubsection{不定代词~\littf{either}~~\littf{neither}~~\littf{none}}
+    不定代词\littf{either}和\littf{neither}的关系如下：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{50pt}|p{130pt}}
+                \hline
+                either&表示两个人或物中任意一个\\ \hline
+                neither&表示两个人或物中没有一个\\ \hline
+                none&表示多个人或物中没有一个\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{不定代词\littf{either}和\littf{neither}和\littf{none}的关系}
+        \end{center}
+    \end{table}\\
+    不定代词\littf{either}可以作主语：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Either} of the two apples is sweet.\\[6mm]
+    \end{center}
+    不定代词\littf{neither}可以作主语：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Neither} of the two apples is sweet.\\[6mm]
+    \end{center}
+    不定代词\littf{none}可以作主语：
+    \begin{center}
+        \large\ttfamily
+        \textbf{None} of the apples is sweet.\\[6mm]
+    \end{center}
+    不定代词\littf{either}可以作宾语：
+    \begin{center}
+        \large\ttfamily
+        I will take \textbf{either} of the two apples.\\[6mm]
+    \end{center}
+    不定代词\littf{neither}可以作宾语：
+    \begin{center}
+        \large\ttfamily
+        I will take \textbf{neither} of the two apples.\\[6mm]
+    \end{center}
+    不定代词\littf{none}可以作宾语：
+    \begin{center}
+        \large\ttfamily
+        I will take \textbf{none} of the apples.\\[6mm]
+    \end{center}
+    当\littf{either/neither}后接\littf{"of~+~名词"}时，其中的\littf{of}可以省略。
+
+\newpage
+
+\subsubsection{不定代词~\littf{another}~~\littf{others}~~\littf{the others}~~\littf{the other}}
+    不定代词\littf{another}和\littf{others}等关系如下：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{70pt}|p{160pt}}
+                \hline
+                another&指代多个人或物中的另一个\\ \hline
+                the other&指代两个人或物中的另一个\\ \hline
+                the others&特指其他的人或物\\ \hline
+                others&泛指其他的人或物\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{不定代词\littf{another}和\littf{others}等的关系}
+        \end{center}
+    \end{table}\\
+    不定代词\littf{another}表示多个人或物中的另一个：
+    \begin{center}
+        \large\ttfamily
+        Not this cup. Give me \textbf{another}.\\[6mm]
+    \end{center}
+    不定代词\littf{the other}表示两个人或物中的另一个：
+    \begin{center}
+        \large\ttfamily
+        Not this hand. Show me \textbf{the other}.\\[6mm]
+    \end{center}
+    以下句子表示想看另外一台冰箱：
+    \begin{center}
+        \large\ttfamily
+        I don't like this fridge. Show me \textbf{another}.\\[6mm]
+    \end{center}
+    以下句子表示想看另外多台冰箱：
+    \begin{center}
+        \large\ttfamily
+        I don't like this fridge. Show me \textbf{some others}.\\[3mm]
+        I don't like this fridge. Show me \textbf{some more}.\\[6mm]
+    \end{center}
+    以下句子表示没有另外一本书籍：
+    \begin{center}
+        \large\ttfamily
+        I don't have enough books. I can't give you \textbf{another}.\\[6mm]
+    \end{center}
+    以下句子表示没有另外多本书籍：
+    \begin{center}
+        \large\ttfamily
+        I don't have enough books. I can't give you \textbf{any others}.\\[3mm]
+        I don't have enough books. I can't give you \textbf{any more}.\\[6mm]
+    \end{center}
+    由此可见，\littf{another}的肯定复数形式为\littf{some others}和\littf{some more}。\\[3mm]
+    由此可见，\littf{another}的否定复数形式为\littf{any others}和\littf{any more}。
+
+\newpage
+
+    不定代词\littf{others}泛指另外的人或物：
+    \begin{center}
+        \large\ttfamily
+        Children learn how to work with others in a team.\\[3mm]
+        Children learn how to work with other children in a team.\\[6mm]
+    \end{center}
+    不定代词\littf{the others}特指另外的人或物：
+    \begin{center}
+        \large\ttfamily
+        Children should be friendly with all the others.\\[3mm]
+        Children should be friendly with all the other children.\\[6mm]
+    \end{center}
+    由此可见，\littf{others}可以用\littf{"other + \hspace{0pt}复数名词"}替代。\\[3mm]
+    由此可见，\littf{the others}可以用\littf{"the other + \hspace{0pt}复数名词"}替代。\\[3mm]
+
+\newpage
+
+\section{限定词}
+    限定词（\littf{determiner}）是指用于名词前对名词其特指或泛指作用的一类词。
+
+\subsection{限定词修饰名词的用法比较}
+    这一部分将讨论限定词修饰一般名词时的用法。
+
+\subsubsection{限定词~\littf{another}~~\littf{other}}
+    限定词\littf{another}一般修饰单数可数名词，表示另一个：
+    \begin{center}
+        \large\ttfamily
+        He tried \textbf{another} plan.\\[6mm]
+    \end{center}
+    限定词\littf{\hphantom{\littf{x}}other\hphantom{\littf{x}}}一般修饰复数可数名词，表示其余的：
+    \begin{center}
+        \large\ttfamily
+        He tried \textbf{other} plans.\\[6mm]
+    \end{center}
+    限定词\littf{another}可以修饰\littf{"\hspace{0pt}基数词~+~复数"}的名词词组，表示金额：
+    \begin{center}
+        \large\ttfamily
+        I have to pay \textbf{another} ten dollars.\\[6mm]
+    \end{center}
+    限定词\littf{another}可以修饰\littf{"\hspace{0pt}基数词~+~复数"}的名词词组，表示时间：
+    \begin{center}
+        \large\ttfamily
+        I will finish it in \textbf{another} two hours.\\[6mm]
+    \end{center}
+    限定词\littf{"the other~+~单数名词"}表示两个人或物中的另一个：
+    \begin{center}
+        \large\ttfamily
+        Their favourite team lost to \textbf{the other team}.\\[3mm]
+        Their favourite team lost to \textbf{the other}.\\[6mm]
+    \end{center}
+    限定词\littf{"the other~+~复数名词"}表示多个人或物中的其余的：
+    \begin{center}
+        \large\ttfamily
+        Their favourite runner was well ahead of \textbf{the othr runners}.\\[3mm]
+        Their favourite runner was well ahead of \textbf{the othrs}.\\[6mm]
+    \end{center}
+    其中\littf{"the other~+~单数名词"}可以用\littf{the other}替代。\\[3mm]
+    其中\littf{"the other~+~复数名词"}可以用\littf{the others}替代。
+
+\newpage
+
+\subsubsection{限定词~\littf{either}~~\littf{neither}}
+    限定词\littf{either}和限定词\littf{neither}都只能修饰单数可数名词。\\[3mm]
+    限定词\littf{either}表示两者中的每一方时，可以与\littf{each}互换：
+    \begin{center}
+        \large\ttfamily
+        He helds a knife in \textbf{either} hand.\\[2mm]
+        He helds a knife in \textbf{each} hand.\\[4mm]
+    \end{center}
+    限定词\littf{either}表示两者中的任意一个，不能与\littf{each}互换：
+    \begin{center}
+        \large\ttfamily
+        You may read \textbf{either} book then wtire a book report.\\[4mm]
+    \end{center}
+    限定词\littf{neither}表示两者都不：
+    \begin{center}
+        \large\ttfamily
+        You should blame \textbf{neither} boy, it is my fault.
+    \end{center}
+
+\subsubsection{限定词~\littf{either}~~\littf{every}}
+    限定词\littf{each}和限定词\littf{every}都只能修饰单数可数名词。\\[3mm]
+    限定词\littf{each~}表示每一，强调个体：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Each} guest was at the table.\\[4mm]
+    \end{center}
+    限定词\littf{every}表示每一，强调全体：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Every} parents had their nameplate on the table.\\[4mm]
+    \end{center}
+    限定词\littf{each~}可以用于两个或两个以上的人或物：
+    \begin{center}
+        \large\ttfamily
+        These two apples are fresh and \textbf{each} apple is sweet.\\[4mm]
+    \end{center}
+    限定词\littf{every}只能用于三个或三个以上的人或物：
+    \begin{center}
+        \large\ttfamily
+        These three apples are fresh and \textbf{every} apple is sweet.\\[4mm]
+    \end{center}
+    当\littf{every}表示“每隔……”时，不能用\littf{each}：
+    \begin{center}
+        \large\ttfamily
+        The patient had to be turned over \textbf{every} two hours.\\[2mm]
+        The water had to be changed \textbf{every} few days.\\[4mm]
+    \end{center}
+    当\littf{every}表示“充分的”时，不能用\littf{each}：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{every} reason to take the action.\\[2mm]
+        He made \textbf{every} efforts to save endangered species.
+    \end{center}
+
+\newpage
+
+\subsubsection{限定词~\littf{both}~~\littf{all}}
+    限定词\littf{both}只能修饰复数可数名词，表示两者都：
+    \begin{center}
+        \large\ttfamily
+        The trade agreement is beneficial to \textbf{both} countries.\\[6mm]
+    \end{center}
+    限定词\littf{all~}可以修饰单数可数名词，表示一切人或物：
+    \begin{center}
+        \large\ttfamily
+        He worked \textbf{all} his life in the coal mine.\\[6mm]
+    \end{center}
+    限定词\littf{all~}可以修饰复数可数名词，表示一切人或物：
+    \begin{center}
+        \large\ttfamily
+        He is a joking man \textbf{all} the children like.\\[6mm]
+    \end{center}
+    限定词\littf{all~}可以修饰不可数名词，表示一切人或物：
+    \begin{center}
+        \large\ttfamily
+        He gave up \textbf{all} the hope.
+    \end{center}
+
+\subsubsection{限定词~\littf{some}~~\littf{any}}
+    限定词\littf{some}用于肯定句，表示一些：
+    \begin{center}
+        \large\ttfamily
+        There is \textbf{some} hope.\\[6mm]
+    \end{center}
+    限定词\littf{any~}用于否定句，表示一些：
+    \begin{center}
+        \large\ttfamily
+        There isn't \textbf{any} hope.\\[6mm]
+    \end{center}
+    限定词\littf{any~}用于疑问句，表示一些：
+    \begin{center}
+        \large\ttfamily
+        Is there \textbf{any} hope?\\[6mm]
+    \end{center}
+    限定词\littf{some}可以用于疑问句表示希望得到肯定答复：
+    \begin{center}
+        \large\ttfamily
+        Will you have \textbf{some} pudding.\\[6mm]
+    \end{center}
+    限定词\littf{any~}可以用于肯定句表示任何一个：
+    \begin{center}
+        \large\ttfamily
+        The doctor is on call at \textbf{any} time.\\[6mm]
+    \end{center}
+    限定词\littf{any~}可以用于肯定句表示任何一个：
+    \begin{center}
+        \large\ttfamily
+        This password can be used by \textbf{any} people.\\[6mm]
+    \end{center}
+    该情况下，限定词\littf{any}只能修饰单数可数名词。
+
+\newpage
+
+\subsubsection{限定词~\littf{few}~~\littf{little}}
+    限定词\littf{a few}修饰复数可数名词，表示肯定：
+    \begin{center}
+        \large\ttfamily
+        We have a \textbf{few} eggs.\\[4mm]
+    \end{center}
+    限定词\littf{few}修饰复数可数名词，表示否定：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{few} eggs.\\[2mm]
+        We have \textbf{not many} eggs.\\[4mm]
+    \end{center}
+    限定词\littf{a little}修饰不可数名词，表示肯定：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{a little} sugar.\\[4mm]
+    \end{center}
+    限定词\littf{little}修饰不可数名词，表示否定：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{little} sugar.\\[2mm]
+        We have \textbf{not much} sugar.\\[4mm]
+    \end{center}
+    由此可见，限定词\littf{few}相当于\littf{not many}。\\[3mm]
+    由此可见，限定词\littf{little}相当于\littf{not much}。\\[8mm]
+    限定词\littf{a few}和\littf{a little}常用\littf{only}修饰：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{only a few} eggs.\\[2mm]
+        We have \textbf{only a little} sugar.\\[4mm]
+    \end{center}
+    限定词\littf{a few}和\littf{a little}常用\littf{just}修饰：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{just a few} eggs.\\[2mm]
+        We have \textbf{just a little} sugar.\\[4mm]
+    \end{center}
+    限定词\littf{a few}和\littf{a little}常用\littf{quite}修饰：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{quite a few} eggs.\\[2mm]
+        We have \textbf{quite a little} sugar.\\[4mm]
+    \end{center}
+    限定词\littf{few}和\littf{little}常用\littf{so}修饰：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{so few} eggs.\\[2mm]
+        We have \textbf{so little} sugar.\\[4mm]
+    \end{center}
+    此外\littf{the few}和\littf{the little}也表示肯定含义，指特定的一些或几个。
+
+\newpage
+
+\subsubsection{限定词~\littf{serval}}
+    限定词\littf{serval}表示几个（至少三个以上）：
+    \begin{center}
+        \large\ttfamily
+        He has \textbf{serval} tickets.\\[3mm]
+        He won \textbf{serval} awards.
+    \end{center}
+
+\subsubsection{限定词~\littf{many}~~\littf{much}}
+    限定词\littf{many}修饰复数可数名词：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{many} eggs.\\[6mm]
+    \end{center}
+    限定词\littf{much}修饰不可数名词：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{much} sugar.\\[6mm]
+    \end{center}
+    肯定句中也常用\littf{a lot of~}修饰可数或不可数名词：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{a lot of} eggs.\\[3mm]
+        We have \textbf{a lot of} sugar.\\[6mm]
+    \end{center}
+    肯定句中也常用\littf{plenty of}修饰可数或不可数名词：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{plenty of} eggs.\\[3mm]
+        We have \textbf{plenty of} sugar.\\[6mm]
+    \end{center}
+    限定词\littf{many}常用\littf{so}修饰：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{so many} eggs.\\[6mm]
+    \end{center}
+    限定词\littf{much}常用\littf{so}修饰：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{so much} sugar.\\[6mm]
+    \end{center}
+    限定词\littf{a lot of}常用\littf{such}修饰：
+    \begin{center}
+        \large\ttfamily
+        We have \textbf{such a lot of} eggs.\\[3mm]
+        We have \textbf{such a lot of} sugars.
+    \end{center}
+
+\newpage
+
+\subsubsection{限定词~\littf{no}}
+    限定词\littf{no}可以修饰名词，相当于\littf{not a}：
+    \begin{center}
+        \large\ttfamily
+        They had \textbf{no} children of their own.\\[3mm]
+        They had \textbf{not a} child of their own.\\[6mm]
+    \end{center}
+    限定词\littf{no}可以修饰名词，相当于\littf{not any}：
+    \begin{center}
+        \large\ttfamily
+        There were \textbf{no} leaks in the roof.\\[3mm]
+        There were \textbf{not any} leaks in the roof.\\[6mm]
+    \end{center}
+    限定词\littf{no}用于主语补语前，较为强烈的表示后接词的反义：
+    \begin{center}
+        \large\ttfamily
+        He is \textbf{no fool}.\\[3mm]
+        He is \textbf{very clever}.\\[6mm]
+    \end{center}
+    限定词\littf{no}用于主语补语前，较为强烈的表示后接词的反义：
+    \begin{center}
+        \large\ttfamily
+        It is \textbf{no easy thing}.\\[3mm]
+        It is \textbf{not an easy thing}.
+    \end{center}
+
+\newpage
+
+\subsection{限定词与表示时间的名词的搭配}
+    这一部分将讨论限定词修饰时间名词时的用法。
+
+\subsubsection{限定词~\littf{this}~~\littf{these}~~\littf{that}~~\littf{those}}
+    限定词\littf{this}和\littf{these}表示当前的时间：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{120pt}|p{80pt}}
+                \hline
+                this morning&今天早晨\\ \hline
+                this evening&今天傍晚\\ \hline
+                this week&本星期\\ \hline
+                this summer&今年夏天\\ \hline
+                this autumn&今年秋天\\ \hline
+                this year&今年\\ \hline
+                these days&这几天\\ \hline
+                these months&这几个月\\ \hline
+                these years&这几年\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{限定词\littf{this}和\littf{these}表示当前的时间}
+        \end{center}
+    \end{table}\\
+    限定词\littf{that}和\littf{those}表示过去的时间：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{120pt}|p{80pt}}
+                \hline
+                that morning&那天早晨\\ \hline
+                that evening&那天傍晚\\ \hline
+                that week&那星期\\ \hline
+                that summer&那年夏天\\ \hline
+                that autumn&那年秋天\\ \hline
+                that year&那年\\ \hline
+                those days&那几天\\ \hline
+                those months&那几个月\\ \hline
+                those years&那几年\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{限定词\littf{that}和\littf{those}表示过去的时间}
+        \end{center}
+    \end{table}\\
+    限定词\littf{"this time~+~yesterday"}表示昨天的这个时候：
+    \begin{center}
+        \ttfamily\large
+        \textbf{This time yesterday}, we were in the amusement park.\\[6mm]
+    \end{center}
+    限定词\littf{"this time~+~tommorrow"}表示明天的这个时候：
+    \begin{center}
+        \ttfamily\large
+        \textbf{This time tommorrow}, we will be in the amusement park.\\[6mm]
+    \end{center}
+
+\newpage
+
+    表示下周的今天可以用\littf{today week}：
+    \begin{center}
+        \ttfamily\large
+        We will graduate \textbf{today week}.\\[6mm]
+    \end{center}
+    表示下周的今天可以用\littf{a week from today}：
+    \begin{center}
+        \ttfamily\large
+        We will graduate \textbf{a week from today}.\\[6mm]
+    \end{center}
+    表示多久前的今天可以用\littf{ago today}：
+    \begin{center}
+        \ttfamily\large
+        I went to Canada five years \textbf{ago today}.\\[6mm]
+    \end{center}
+
+\subsubsection{限定词~\littf{next}}
+    限定词\littf{next}表示紧接到来的时间（将来时用\littf{next}）：
+    \begin{center}
+        \large\ttfamily
+        He will be back at school \textbf{next week}.\\[3mm]
+        He will be back at school \textbf{next year}.\\[6mm]
+    \end{center}
+    限定词\littf{next}表示紧接到来的时间（过去时用\littf{the next}）：
+    \begin{center}
+        \large\ttfamily
+        He were told that they would have a test \textbf{the next week}.\\[3mm]
+        He were told that they would have a test \textbf{the next year}.\\[6mm]
+    \end{center}
+    限定词\littf{next}可以用于修饰\littf{morning/afternoon/evening}：
+    \begin{center}
+        \large\ttfamily
+        He will be back at school \textbf{next mourning}.\\[3mm]
+        He were told that they would have a test \textbf{the next afternoon}.\\[6mm]
+    \end{center}
+    修饰星期时，无论时态如何\littf{next}前均不加\littf{the}：
+    \begin{center}
+        \large\ttfamily
+        He will be back at school \textbf{next Monday}.\\[3mm]
+        He were told that they would have a test \textbf{next Friday}.\\[6mm]
+    \end{center}
+    表示下下个时，应当使用\littf{the ... after next}：
+    \begin{center}
+        \large\ttfamily
+        He will be back at school \textbf{the day after next}.\\[3mm]
+        He were told that they would have a test \textbf{the week after next}.\\[6mm]
+    \end{center}
+
+\newpage
+
+\subsubsection{限定词~\littf{last}}
+    限定词\littf{last}表示紧接过去的时间：
+    \begin{center}
+        \large\ttfamily
+        They finished their research \textbf{last week}.\\[3mm]
+        They finished their research \textbf{last year}.\\[6mm]
+    \end{center}
+    限定词\littf{last}不能用于修饰\littf{morning/afternoon/evening}：
+    \begin{center}
+        \large\ttfamily
+        They finished their research \textbf{yesterday morning}.\\[3mm]
+        They finished their research \textbf{yesterday afternoon}.\\[6mm]
+    \end{center}
+    表示上上个时，应当使用\littf{the ... before next}：
+    \begin{center}
+        \large\ttfamily
+        They finished their research \textbf{the day before last}.\\[3mm]
+        They finished their research \textbf{the week before last}.
+    \end{center}\vspace{15pt}
+
+\subsubsection{限定词~\littf{every}~~\littf{another}~~\littf{other}}
+    限定词\littf{"every~+~基数词~+~时间单位词"}，表示每隔一段时间：
+    \begin{center}
+        \large\ttfamily
+        The patient had to be turned over \textbf{every two hours}.\\[3mm]
+        The water had to be changed \textbf{every three days}.\\[6mm]
+    \end{center}
+    限定词\littf{"another~+~时间段"}，表示又一段时间：
+    \begin{center}
+        \large\ttfamily
+        I will finish it in \textbf{another two hours}.\\[3mm]
+        I will stay in the town for \textbf{another two weeks}.\\[6mm]
+    \end{center}
+    限定词\littf{"the other day"}表示前几天：
+    \begin{center}
+        \large\ttfamily
+        I paid a visit to the museum \textbf{the other day}.\\[6mm]
+    \end{center}
+    限定词\littf{"a few days ago"}表示前几天：
+    \begin{center}
+        \large\ttfamily
+        I paid a visit to the museum \textbf{a few days ago}.\\[6mm]
+    \end{center}
+    其中\littf{the other day}和\littf{a few days ago}可以互换使用。
+
+\newpage
+
+\subsubsection{限定词~\littf{one}}
+    限定词\littf{"one~+~时间名词"}，表示某一个时间：
+    \begin{center}
+        \large\ttfamily
+        \textbf{One morning}, he got a telephone call.\\[3mm]
+        \textbf{One afternoon}, he got a telephone call.\\[3mm]
+        \textbf{One day}, he got a telephone call.\\[3mm]
+        \textbf{One night}, he got a telephone call.
+    \end{center}\vspace{15pt}
+
+\subsubsection{限定词~\littf{all}}
+    限定词\littf{"all~+~时间名词单数"}，表示整段时间：
+    \begin{center}
+        \large\ttfamily
+        She slept {all morning}.\\[3mm]
+        She slept {all afternoon}.\\[3mm]
+        She slept {all day}.\\[3mm]
+        She slept {all night}.\\[6mm]
+    \end{center}
+    限定词\littf{"most of the~+~时间名词单数"}，表示整段时间：
+    \begin{center}
+        \large\ttfamily
+        He sat at the desk writing \textbf{most of the day}.\\[3mm]
+        He learned to ski in the mountain \textbf{most of the winter}.
+    \end{center}\vspace{15pt}
+
+\subsubsection{表示频度}
+    使用\littf{"表示次数的副词+a+时间单位词"}表示频度：
+    \begin{center}
+        \large\ttfamily
+        The professor give a lecture \textbf{twice a year}.\\[6mm]
+    \end{center}
+    使用\littf{"表示次数的副词+per+时间单位词"}表示频度：
+    \begin{center}
+        \large\ttfamily
+        The professor give a lecture \textbf{twice per year}.\\[6mm]
+    \end{center}
+    使用\littf{"表示次数的副词+per+时间单位词"}表示频度：
+    \begin{center}
+        \large\ttfamily
+        The professor give a lecture \textbf{twice every year}.
+    \end{center}
+
+\newpage
+
+\section{冠词}
+    冠词（\littf{article}）是一种虚词，用于名词前，对名词起限制作用。\\[3mm]
+    冠词可以分为两种：不定冠词（\texttt{indefinite article}），定冠词（\texttt{definite article}）。\\[3mm]
+    不定冠词包含\littf{a~}，其用于辅音音素开头的词。\\[3mm]
+    不定冠词包含\littf{an}，其用于元音音素开头的词。\\[3mm]
+    定冠词包含\littf{the}，其可以用于任何名词前。\\[3mm]
+    有些名词前不用冠词，这种语法称为零冠词（\texttt{zero article}）。
+
+\subsection{冠词表示类指}
+    通过\littf{"不定冠词 + 单数可数名词"}可以表示类别：
+    \begin{center}
+        \large\ttfamily
+        \textbf{A snake} is a cold-blooded animal.\\[6mm]
+    \end{center}
+    冠词\littf{"定冠词 + 单数可数名词"}可以表示类别：
+    \begin{center}
+        \large\ttfamily
+        \textbf{The snake} is a cold-blooded animal.\\[6mm]
+    \end{center}
+    冠词\littf{"零冠词 + 复数可数名词"}可以表示类别：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Snakes} are cold-blooded animal.\\[6mm]
+    \end{center}
+    需要注意的是，当\littf{man/mankind}作为人类表示类指时，不用冠词：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Man} is fighting a battle against pollution.\\[3mm]
+        \textbf{Mankind} is fighting a battle against pollution.\\[6mm]
+    \end{center}
+    三种用法各有侧重：\\[3mm]
+    1.使用不定冠词强调个体，常用于对事物下定义。\\[3mm]
+    2.使用定冠词强调事物的整体，与其他类事物的区别。\\[3mm]
+    3.使用零冠词强调事物的全体，较多的用于口语之中。\\[3mm]
+
+\newpage
+
+    用于补语前表示职业或身份时，常用不定冠词：
+    \begin{center}
+        \large\ttfamily
+        He is \textbf{a teacher}.\\[2mm]
+        He is \textbf{a taxi driver}.\\[4mm]
+    \end{center}
+    用于补语前表示职务或头衔时，常用零冠词：
+    \begin{center}
+        \large\ttfamily
+        He is \textbf{Minister of Foreign Affairs}.\\[2mm]
+        He is \textbf{President of the Republic}.\\[4mm]
+    \end{center}
+    表示家庭成员的名词前常用零冠词：
+    \begin{center}
+        \large\ttfamily
+        \textbf{Father} always watch movies with us on Sunday.\\[2mm]
+        \textbf{Mother} always bake cookies for us on Saturday.
+    \end{center}
+
+\subsubsection{定冠词\littf{the}与集体名词连用}
+    定冠词\littf{the}用于集体名词前表示特指的群体：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{105pt}|p{60pt}|p{105pt}|p{60pt}}
+                \hline
+                the public&公众&the government&政府\\ \hline
+                the working people&劳动人民&the working class&工人阶级\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{定冠词\littf{the}与集体名词连用}
+        \end{center}
+    \end{table}\vspace{-20pt}
+
+\subsubsection{定冠词\littf{the}与形容词连用}
+    定冠词\littf{the}用于形容词前表示一类人：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{105pt}|p{60pt}|p{105pt}|p{60pt}}
+                \hline
+                the rich&富人&the poor&穷人\\ \hline
+                the young&年轻人&the living&活人\\ \hline
+                the sick&病人&the blind&盲人\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{定冠词\littf{the}与形容词连用}
+        \end{center}
+    \end{table}\\
+    定冠词\littf{the}用于形容词前表示一类物：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{105pt}|p{60pt}|p{105pt}|p{60pt}}
+                \hline
+                the beautiful&美的东西&the ugly&丑的东西\\ \hline
+                the right&正确的东西&the wrong&活人\\ \hline
+                the true&病人&the false&盲人\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{定冠词\littf{the}与形容词连用}
+        \end{center}
+    \end{table}\\
+    定冠词用于国籍形容词前可以表示民族的整个群体，例如\littf{The English}。\\[3mm]
+    零冠词用于国民的复数前可以表示民族的整个群体，例如\littf{Englishmen}。
+
+\newpage
+
+    部分国家的相关用法如下：
+    \begin{table}[h]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{65pt}|p{60pt}|p{85pt}|p{65pt}|p{60pt}}
+                \hline
+                国名&国籍&国民单数&国民复数&语言\\ \hline
+                America&American&An American&Americans&-\\ \hline
+                Australia&Australian&An Australian&Australians&-\\ \hline
+                Britain&British&-&-&-\\ \hline
+                Canada&Canadian&A Canadian&Canadians&-\\ \hline
+                China&Chinese&A Chinese&Chinese&Chinese\\ \hline
+                Egypt&Egyptian&An Egyptian&Egyptians&-\\ \hline
+                England&English&An Englishman&Englishmen&English\\ \hline
+                France&French&A Frechman&Frechmen&French\\ \hline
+                Germany&German&A German&Germans&German\\ \hline
+                Greece&Greek&A Greek&Greeks&Greek\\ \hline
+                Japan&Japanese&A Japanese&Japnese&Japanese\\ \hline
+                India&Indian&An Indian&Indians&-\\ \hline
+                Itlay&Italian&An Italian&Italian&Italian\\ \hline
+                Holland&Dutch&A Dutchman&Dutchmen&Dutch\\ \hline
+                Portugal&Portuguese&A Portuguese&Portuguese&Portuguese\\ \hline
+                Russia&Russian&A Russian&Russians&Russian\\ \hline
+                Spain&Spanish&A Spaniard&Spaniards&Spanish\\ \hline
+                Sweden&Swedish&A Swede&Swedes&Swedish\\ \hline
+                Switzerland&Swiss&A Swiss&Swiss&-\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{国家的相关用法}
+        \end{center}
+    \end{table}\\
+    部分地区的相关用法如下：
+    \begin{table}[h!]
+        \begin{center}
+            \ttfamily
+            \begin{tabular}{p{65pt}|p{60pt}|p{85pt}|p{65pt}|p{60pt}}
+                \hline
+                地区中文&地区名&地区的&居民单数&居民单数\\ \hline
+                非洲&Africa&African&An African&Africans\\ \hline
+                亚洲&Asia&Asian&An Asian&Asians\\ \hline
+                美洲&America&American&An American&Americans\\ \hline
+                南极&Antarctica&Antarctic&&\\ \hline
+                北极&Arctic&Arctic&&\\ \hline
+                欧洲&Europe&European&A European&Europeans\\ \hline
+                大洋洲&Oceania&Oceanic&&\\ \hline
+            \end{tabular}
+            \rmfamily
+            \caption{国家的相关用法}
+        \end{center}
+    \end{table}\\
+
+\newpage
+
+\subsection{冠词表示量度}
+    不定冠词可以表示一个：
+    \begin{center}
+        \large\ttfamily
+        He bought \textbf{a apple}.\\[6mm]
+    \end{center}
+    使用\littf{a/an}偏向于表示类属（强调是保险柜不是别的）：
+    \begin{center}
+        \large\ttfamily
+        The diver found \textbf{a safe} in the sunken ship.\\[6mm]
+    \end{center}
+    使用\littf{one~}偏向于表示数量（强调是只有一个保险柜）：
+    \begin{center}
+        \large\ttfamily
+        The diver found \textbf{one safe} in the sunken ship.\\[6mm]
+    \end{center}
+    不定冠词可以表示每一：
+    \begin{center}
+        \large\ttfamily
+        Theses apples sell \textbf{two pounds a kilo}.\\[3mm]
+        He drove his car at \textbf{seventy miles an hour}.\\[6mm]
+    \end{center}
+    定冠词也可以表示每一：
+    \begin{center}
+        \large\ttfamily
+        Theses apples sell \textbf{two pounds the kilo}.\\[3mm]
+        His truck does \textbf{thirty miles to the gallon}.\\[6mm]
+    \end{center}
+    有时候也有\littf{per/for each}表示每一：
+    \begin{center}
+        \large\ttfamily
+        The workbook is only three yuan \textbf{per copy}.\\[3mm]
+        The workbook is only three yuan \textbf{for each copy}.\\[6mm]
+    \end{center}
+    不定冠词用于人名前可以表示某一个：
+    \begin{center}
+        \large\ttfamily
+        \textbf{A Miss Alice} called you this morning.\\[6mm]
+    \end{center}
+    使用\littf{"some + 单数可数名词"}表示某种：
+    \begin{center}
+        \large\ttfamily
+        There was \textbf{some} radioactive element in the mineral.
+    \end{center}
+    使用\littf{"a certain + 单数可数名词"}表示某种：
+    \begin{center}
+        \large\ttfamily
+        There was \textbf{a certain} radioactive element in the mineral.\\[6mm]
+    \end{center}
+
+
+\end{document}
+
