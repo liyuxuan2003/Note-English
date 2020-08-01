@@ -116,7 +116,13 @@
 \contentsline {subsubsection}{\numberline {6.3.2}情景所指}{85}{subsubsection.6.3.2}% 
 \contentsline {subsubsection}{\numberline {6.3.3}表示空间时间的名词}{86}{subsubsection.6.3.3}% 
 \contentsline {subsubsection}{\numberline {6.3.4}表示自然事物的名词}{86}{subsubsection.6.3.4}% 
-\contentsline {subsubsection}{\numberline {6.3.5}序数词和冠词的连用}{87}{subsubsection.6.3.5}% 
-\contentsline {subsubsection}{\numberline {6.3.6}比较结构中冠词的使用}{87}{subsubsection.6.3.6}% 
-\contentsline {subsubsection}{\numberline {6.3.7}时间的特指与泛指}{87}{subsubsection.6.3.7}% 
-\contentsline {subsubsection}{\numberline {6.3.8}群体的特指与泛指}{88}{subsubsection.6.3.8}% 
+\contentsline {subsubsection}{\numberline {6.3.5}时间的特指与泛指}{87}{subsubsection.6.3.5}% 
+\contentsline {subsubsection}{\numberline {6.3.6}群体的特指与泛指}{87}{subsubsection.6.3.6}% 
+\contentsline {subsubsection}{\numberline {6.3.7}序数词和冠词的连用}{88}{subsubsection.6.3.7}% 
+\contentsline {subsubsection}{\numberline {6.3.8}比较结构中冠词的使用}{88}{subsubsection.6.3.8}% 
+\contentsline {subsection}{\numberline {6.4}冠词在不同情况下的使用}{89}{subsection.6.4}% 
+\contentsline {subsubsection}{\numberline {6.4.1}表示地点的名词}{89}{subsubsection.6.4.1}% 
+\contentsline {subsubsection}{\numberline {6.4.2}表示交通工具}{90}{subsubsection.6.4.2}% 
+\contentsline {subsubsection}{\numberline {6.4.3}表示乐器运动}{90}{subsubsection.6.4.3}% 
+\contentsline {subsubsection}{\numberline {6.4.4}表示一日三餐}{91}{subsubsection.6.4.4}% 
+\contentsline {subsubsection}{\numberline {6.4.5}表示特定结构}{91}{subsubsection.6.4.5}% 
