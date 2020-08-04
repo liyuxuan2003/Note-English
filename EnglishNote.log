@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  3 AUG 2020 20:42
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  4 AUG 2020 07:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1068,32 +1068,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 5177--5244
 
  []
 
-[100] [101] [102]
-Underfull \hbox (badness 10000) in paragraph at lines 5348--5391
+[100] [101] [102] [103] [104]
+Underfull \hbox (badness 10000) in paragraph at lines 5488--5489
 
  []
 
-[103] [104]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5458.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5458.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5491--5511
+
+ []
+
+[105] [106]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5567.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5567.
  (./EnglishNote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5458.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5458.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5567.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5567.
 Package rerunfilecheck Info: File `EnglishNote.out' has not changed.
-(rerunfilecheck)             Checksum: B340505880F7A37043BCED44D6246C10.
+(rerunfilecheck)             Checksum: CA077BED7E433A78E4062396C2B38814.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5458.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5567.
  ) 
 Here is how much of TeX's memory you used:
- 34766 strings out of 492922
- 729178 string characters out of 6136751
- 793613 words of memory out of 5000000
- 38362 multiletter control sequences out of 15000+600000
+ 34767 strings out of 492922
+ 729194 string characters out of 6136751
+ 794015 words of memory out of 5000000
+ 38363 multiletter control sequences out of 15000+600000
  536952 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  55i,12n,79p,450b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on EnglishNote.pdf (104 pages).
+Output written on EnglishNote.pdf (106 pages).

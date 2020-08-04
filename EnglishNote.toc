@@ -132,4 +132,12 @@
 \contentsline {section}{\numberline {7}数词}{101}{section.7}% 
 \contentsline {subsection}{\numberline {7.1}基数词和序数词的拼写}{101}{subsection.7.1}% 
 \contentsline {subsection}{\numberline {7.2}其他数的表示}{103}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}词语{\hspace {3pt}\ttfamily half}的用法}{104}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.3}词语{\hspace {3pt}\ttfamily dozen}和{\hspace {3pt}\ttfamily score}的用法}{103}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}词语{\hspace {3pt}\ttfamily half}的用法}{104}{subsection.7.4}% 
+\contentsline {subsection}{\numberline {7.5}不定数量的表示}{105}{subsection.7.5}% 
+\contentsline {subsubsection}{\numberline {7.5.1}词语{\hspace {3pt}\ttfamily dozen}和{\hspace {3pt}\ttfamily score}的的不定数量表示}{105}{subsubsection.7.5.1}% 
+\contentsline {subsubsection}{\numberline {7.5.2}词语{\hspace {3pt}\ttfamily hundred}和{\hspace {3pt}\ttfamily thousand}和{\hspace {3pt}\ttfamily million}的不定数量表示}{105}{subsubsection.7.5.2}% 
+\contentsline {subsubsection}{\numberline {7.5.3}相邻并列数量的表示}{105}{subsubsection.7.5.3}% 
+\contentsline {subsubsection}{\numberline {7.5.4}大约数目的表示}{106}{subsubsection.7.5.4}% 
+\contentsline {subsubsection}{\numberline {7.5.5}大于某一数目的表示}{106}{subsubsection.7.5.5}% 
+\contentsline {subsubsection}{\numberline {7.5.6}小于某一数目的表示}{106}{subsubsection.7.5.6}% 
